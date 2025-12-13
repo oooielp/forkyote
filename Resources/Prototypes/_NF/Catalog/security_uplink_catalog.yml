@@ -256,6 +256,22 @@
         tags:
           - SecurityUplink
 
+- type: listing # Coyote: Added Chort
+  id: UplinkSecurityChort
+  name: uplink-security-chort-name
+  description: uplink-security-chort-desc
+  productEntity: ShuttleGunChortMachineGunCircuitboard
+  icon: { sprite: _NF/Objects/Misc/module.rsi, state: nfsd }
+  cost:
+    FrontierUplinkCoin: 4
+  categories:
+  - UplinkSecurityWeapons
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - SecurityUplink
+
 - type: listing #Coyote added hristov to NFSD uplink
   id: UplinkSecurityHristov
   name:  uplink-security-hristov-name

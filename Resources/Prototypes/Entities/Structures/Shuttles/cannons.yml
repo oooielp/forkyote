@@ -97,6 +97,29 @@
     proto: NFRedLightLaser # Frontier: use NF prefix
     fireCost: 50
 
+# COYOTE START
+- type: entity
+  id: CSShuttleGunChortMachineGun
+  parent: [ ShuttleGunSvalinnMachineGun, BaseC3MetaSec]
+  name: MG-60 "Chort" MAMG
+  description: Magnetically-Assisted Machine Gun made from designs recovered from the "Likho" automated frigate. It prints ammo on the fly, so, no worries there! Extremely hazardous to health and safety.
+  categories: [ DoNotMap ]
+  components:
+  - type: Gun
+    fireRate: 3.4 # ttk of ~5 seconds against a 3 layer thick mining wall stack. probs overtuned idk.
+    useKey: false
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/lmg.ogg
+      params:
+        variation: 0.05
+  - type: Machine
+    board: ShuttleGunChortMachineGunCircuitboard
+  - type: HitscanBatteryAmmoProvider
+    proto: CSBulletRifle60MG # Frontier: use NF prefix
+    fireCost: 50 # svalinn mag size but can't be upgraded, soooo.
+
+# COYOTE END
+
 - type: entity
   id: ShuttleGunPerforator
   parent: [ ShuttleGunBase, ConstructibleMachine]

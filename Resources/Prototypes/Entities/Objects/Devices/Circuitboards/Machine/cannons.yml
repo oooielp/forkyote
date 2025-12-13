@@ -20,6 +20,23 @@
       Steel: 5
       CableHV: 5
 
+# START COYOTE
+- type: entity
+  id: ShuttleGunChortMachineGunCircuitboard
+  parent: [BaseMachineCircuitboard, BaseC3MetaSec]
+  name: MG-60 "Chort" MAMG Circuit Board
+  description: A machine printed circuit board for an MG-60 "Chort" Magnetically Assisted Machine Gun. It prints ammo on the fly, so, no worries there!
+  categories: [ DoNotMap ]
+  components:
+  - type: Sprite
+    state: security
+  - type: MachineBoard
+    prototype: CSShuttleGunChortMachineGun
+    stackRequirements: # Unupgradable. What you see is what you get. It's pretty good though!
+      Steel: 5
+      CableHV: 5
+# END COYOTE
+
 - type: entity
   id: ShuttleGunPerforatorCircuitboard
   parent: BaseMachineCircuitboard

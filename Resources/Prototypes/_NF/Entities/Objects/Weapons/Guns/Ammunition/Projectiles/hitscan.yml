@@ -125,3 +125,23 @@
   muzzleFlash: *specialMuzzleFlash
   travelFlash: *specialTravelFlash
   impactFlash: *specialImpactFlash
+
+# START COYOTE
+# Chort
+- type: hitscan
+  id: CSBulletRifle60MG
+  damage:
+    types:
+      Piercing: 95
+      Structural: 200
+  muzzleFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: muzzle_bullet
+  travelFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: xray
+  impactFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    state: impact_bullet
+  maxLength: 100
+# END COYOTE
