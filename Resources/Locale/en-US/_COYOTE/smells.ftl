@@ -1,9 +1,9 @@
 # She smells like butt
-scent-examine-one      = [color=Yellow]{CAPITALIZE(SUBJECT($scenter))} {CONJUGATE-BASIC($scenter, "smell", "smells")} like {$scent}.[/color]
+scent-examine-one      = [color=Cyan]{CAPITALIZE(SUBJECT($scenter))} {CONJUGATE-BASIC($scenter, "smell", "smells")} like {$scent}.[/color]
 # She smells like butt and cheese
-scent-examine-two      = [color=Yellow]{CAPITALIZE(SUBJECT($scenter))} {CONJUGATE-BASIC($scenter, "smell", "smells")} like {$scent1} and {$scent2}.[/color]
+scent-examine-two      = [color=Cyan]{CAPITALIZE(SUBJECT($scenter))} {CONJUGATE-BASIC($scenter, "smell", "smells")} like {$scent1} and {$scent2}.[/color]
 # She smells like butt, cheese, bingus, coffee, cheetos and chicken
-scent-examine-multiple = [color=Yellow]{CAPITALIZE(SUBJECT($scenter))} {CONJUGATE-BASIC($scenter, "smell", "smells")} like {$scents}, with a hint of {$lastscent}.[/color]
+scent-examine-multiple = [color=Cyan]{CAPITALIZE(SUBJECT($scenter))} {CONJUGATE-BASIC($scenter, "smell", "smells")} like {$scents}, with a hint of {$lastscent}.[/color]
 
 # Dan Kelly sniffs you.
 scent-sniffed-popup    = {CAPITALIZE($sniffer)} sniffs you.
