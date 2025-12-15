@@ -86,66 +86,69 @@ public sealed class ScentSystem : EntitySystem
             args.Verbs.Add(verb);
         }
 
+        // And, the blanket toggle passive detection verb
+        if (args.User == args.Target)
+        {
+            var passiveText = smellerComp.PassiveSmellDetectionEnabled ? "Ignore Scents" : "Notice Scents";
+            InteractionVerb passiveVerb = new()
+            {
+                Text = passiveText,
+                Priority = 0,
+                Category = VerbCategory.Interaction,
+                Act = () =>
+                {
+                    smellerComp.PassiveSmellDetectionEnabled = !smellerComp.PassiveSmellDetectionEnabled;
+                    var popupMsg = smellerComp.PassiveSmellDetectionEnabled
+                        ? Loc.GetString("scent-verb-passive-unignore-popup")
+                        : Loc.GetString("scent-verb-passive-ignore-popup");
+                    _popupSystem.PopupEntity(
+                        popupMsg,
+                        args.User,
+                        args.User,
+                        PopupType.MediumCautionLingering,
+                        false);
+                }
+            };
+            args.Verbs.Add(passiveVerb);
+        }
         // and a verb to toggle being able to smell this smelly beast
         // trust me, its needed
-        if (args.User == args.Target)
-            return; // you already cant smell yourself!
-        var isIgnoringThem = IsIgnoringSmell(smellerComp, scentComp);
-        var toggleText = isIgnoringThem ? "Notice Scent" : "Ignore Scent";
-
-        InteractionVerb toggleVerb = new()
+        if (args.User != args.Target)
         {
-            Text = toggleText,
-            Priority = 1,
-            Category = VerbCategory.Interaction,
-            Act = () =>
-            {
-                ToggleIgnoreSmell(smellerComp, scentComp);
-                var popupMsg = isIgnoringThem
-                    ? Loc.GetString(
-                        "scent-verb-unignore-popup",
-                        ("smelly", Identity.Entity(
-                            args.Target,
-                            EntityManager,
-                            args.User)))
-                    : Loc.GetString(
-                        "scent-verb-ignore-popup",
-                        ("smelly", Identity.Entity(
-                            args.Target,
-                            EntityManager,
-                            args.User)));
-                _popupSystem.PopupEntity(
-                    popupMsg,
-                    args.User,
-                    args.User,
-                    PopupType.MediumCautionLingering,
-                    false);
-            }
-        };
-        args.Verbs.Add(toggleVerb);
+            var isIgnoringThem = IsIgnoringSmell(smellerComp, scentComp);
+            var toggleText = isIgnoringThem ? "Notice Scent" : "Ignore Scent";
 
-        // And, the blanket toggle passive detection verb
-        var passiveText = smellerComp.PassiveSmellDetectionEnabled ? "Ignore Scents" : "Notice Scents";
-        InteractionVerb passiveVerb = new()
-        {
-            Text = passiveText,
-            Priority = 0,
-            Category = VerbCategory.Interaction,
-            Act = () =>
+            InteractionVerb toggleVerb = new()
             {
-                smellerComp.PassiveSmellDetectionEnabled = !smellerComp.PassiveSmellDetectionEnabled;
-                var popupMsg = smellerComp.PassiveSmellDetectionEnabled
-                    ? Loc.GetString("scent-verb-passive-unignore-popup")
-                    : Loc.GetString("scent-verb-passive-ignore-popup");
-                _popupSystem.PopupEntity(
-                    popupMsg,
-                    args.User,
-                    args.User,
-                    PopupType.MediumCautionLingering,
-                    false);
-            }
-        };
-        args.Verbs.Add(passiveVerb);
+                Text = toggleText,
+                Priority = 1,
+                Category = VerbCategory.Interaction,
+                Act = () =>
+                {
+                    ToggleIgnoreSmell(smellerComp, scentComp);
+                    var popupMsg = isIgnoringThem
+                        ? Loc.GetString(
+                            "scent-verb-unignore-popup",
+                            ("smelly", Identity.Entity(
+                                args.Target,
+                                EntityManager,
+                                args.User)))
+                        : Loc.GetString(
+                            "scent-verb-ignore-popup",
+                            ("smelly", Identity.Entity(
+                                args.Target,
+                                EntityManager,
+                                args.User)));
+                    _popupSystem.PopupEntity(
+                        popupMsg,
+                        args.User,
+                        args.User,
+                        PopupType.MediumCautionLingering,
+                        false);
+                }
+            };
+            args.Verbs.Add(toggleVerb);
+        }
     }
 
     /// <summary>
@@ -743,17 +746,17 @@ public sealed class ScentSystem : EntitySystem
         {
             if (!_proto.TryIndex<ScentPrototype>(scent.ScentProto, out var scentProto))
                 continue; // invalid scent proto
-            if (SmellGuidIsOnCooldown(smellerComp, scent.ScentInstanceId))
-                continue;
+            // if (SmellGuidIsOnCooldown(smellerComp, scent.ScentInstanceId))
+            //     continue;
             if (!LewdOkay(smellerUid, scentProto.Lewd))
                 continue;
             availableScents.Add(scent);
         }
         // if its empty, just pick any scent
-        if (availableScents.Count == 0)
-        {
-            availableScents = scentComp.Scents;
-        }
+        // if (availableScents.Count == 0)
+        // {
+        //     availableScents = scentComp.Scents;
+        // }
         if (availableScents.Count == 0)
             return; // no scents at all???
         var chosenScent = _rng.Pick(availableScents);
@@ -773,19 +776,23 @@ public sealed class ScentSystem : EntitySystem
             smellerComp,
             directSmellTicket,
             true);
-        // and a popup to who you sniffed, telling them they got sniffed
-        var snifferName = Identity.Entity(
-            smellerUid,
-            EntityManager,scentUid);
-        var sniffedMsg = Loc.GetString(
-            "scent-sniffed-popup",
-            ("sniffer", snifferName));
-        _popupSystem.PopupEntity(
-            sniffedMsg,
-            scentUid,
-            scentUid,
-            PopupType.SmallLingering,
-            false);
+        if (smellerUid != scentUid)
+        {
+            // and a popup to who you sniffed, telling them they got sniffed
+            var snifferName = Identity.Entity(
+                smellerUid,
+                EntityManager,
+                scentUid);
+            var sniffedMsg = Loc.GetString(
+                "scent-sniffed-popup",
+                ("sniffer", snifferName));
+            _popupSystem.PopupEntity(
+                sniffedMsg,
+                scentUid,
+                scentUid,
+                PopupType.SmallLingering,
+                false);
+        }
     }
 
     /// <summary>
