@@ -8,6 +8,13 @@ namespace Content.Shared._Coyote.SniffAndSmell;
 public sealed partial class SmellerComponent : Component
 {
     /// <summary>
+    /// Whether or not to detect smells.
+    /// </summary>
+    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
+    public bool PassiveSmellDetectionEnabled = true;
+
+    /// <summary>
     /// The dict of scents we smelled, and the next time we can smell them again.
     /// </summary>
     [ViewVariables]

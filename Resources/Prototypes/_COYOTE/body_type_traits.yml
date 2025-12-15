@@ -1,0 +1,360 @@
+- type: trait
+  id: BodyTypeBuxom
+  name: trait-bodytype-buxom-name
+  description: trait-bodytype-buxom-desc
+  category: BodyType
+  cost: 1
+  bodytype: buxom
+
+- type: trait
+  id: BodyTypeBroadshouldered
+  name: trait-bodytype-broadshouldered-name
+  description: trait-bodytype-broadshouldered-desc
+  category: BodyType
+  cost: 1
+  bodytype: broadshouldered
+
+- type: trait
+  id: BodyTypeSlender
+  name: trait-bodytype-slender-name
+  description: trait-bodytype-slender-desc
+  category: BodyType
+  cost: 1
+  bodytype: slender
+
+- type: trait
+  id: BodyTypeAthletic
+  name: trait-bodytype-athletic-name
+  description: trait-bodytype-athletic-desc
+  category: BodyType
+  cost: 1
+  bodytype: athletic
+
+- type: trait
+  id: BodyTypeStocky
+  name: trait-bodytype-stocky-name
+  description: trait-bodytype-stocky-desc
+  category: BodyType
+  cost: 1
+  bodytype: stocky
+
+- type: trait
+  id: BodyTypeLithe
+  name: trait-bodytype-lithe-name
+  description: trait-bodytype-lithe-desc
+  category: BodyType
+  cost: 1
+  bodytype: lithe
+
+- type: trait
+  id: BodyTypeLean
+  name: trait-bodytype-lean-name
+  description: trait-bodytype-lean-desc
+  category: BodyType
+  cost: 1
+  bodytype: lean
+
+- type: trait
+  id: BodyTypeMuscular
+  name: trait-bodytype-muscular-name
+  description: trait-bodytype-muscular-desc
+  category: BodyType
+  cost: 1
+  bodytype: muscular
+
+- type: trait
+  id: BodyTypeBurly
+  name: trait-bodytype-burly-name
+  description: trait-bodytype-burly-desc
+  category: BodyType
+  cost: 1
+  bodytype: burly
+
+- type: trait
+  id: BodyTypePetite
+  name: trait-bodytype-petite-name
+  description: trait-bodytype-petite-desc
+  category: BodyType
+  cost: 1
+  bodytype: petite
+
+- type: trait
+  id: BodyTypeWillowy
+  name: trait-bodytype-willowy-name
+  description: trait-bodytype-willowy-desc
+  category: BodyType
+  cost: 1
+  bodytype: willowy
+
+- type: trait
+  id: BodyTypeHeavyset
+  name: trait-bodytype-heavyset-name
+  description: trait-bodytype-heavyset-desc
+  category: BodyType
+  cost: 1
+  bodytype: heavyset
+
+- type: trait
+  id: BodyTypeCurvy
+  name: trait-bodytype-curvy-name
+  description: trait-bodytype-curvy-desc
+  category: BodyType
+  cost: 1
+  bodytype: curvy
+
+- type: trait
+  id: BodyTypeGangly
+  name: trait-bodytype-gangly-name
+  description: trait-bodytype-gangly-desc
+  category: BodyType
+  cost: 1
+  bodytype: gangly
+
+- type: trait
+  id: BodyTypeHusky
+  name: trait-bodytype-husky-name
+  description: trait-bodytype-husky-desc
+  category: BodyType
+  cost: 1
+  bodytype: husky
+
+- type: trait
+  id: BodyTypeCompact
+  name: trait-bodytype-compact-name
+  description: trait-bodytype-compact-desc
+  category: BodyType
+  cost: 1
+  bodytype: compact
+
+- type: trait
+  id: BodyTypeChiseled
+  name: trait-bodytype-chiseled-name
+  description: trait-bodytype-chiseled-desc
+  category: BodyType
+  cost: 1
+  bodytype: chiseled
+
+- type: trait
+  id: BodyTypeSoftbuilt
+  name: trait-bodytype-softbuilt-name
+  description: trait-bodytype-softbuilt-desc
+  category: BodyType
+  cost: 1
+  bodytype: softbuilt
+
+- type: trait
+  id: BodyTypeTopheavy
+  name: trait-bodytype-topheavy-name
+  description: trait-bodytype-topheavy-desc
+  category: BodyType
+  cost: 1
+  bodytype: topheavy
+
+- type: trait
+  id: BodyTypeBottomheavy
+  name: trait-bodytype-bottomheavy-name
+  description: trait-bodytype-bottomheavy-desc
+  category: BodyType
+  cost: 1
+  bodytype: bottomheavy
+
+- type: trait
+  id: BodyTypeBarrelchested
+  name: trait-bodytype-barrelchested-name
+  description: trait-bodytype-barrelchested-desc
+  category: BodyType
+  cost: 1
+  bodytype: barrelchested
+
+- type: trait
+  id: BodyTypeNarrowframed
+  name: trait-bodytype-narrowframed-name
+  description: trait-bodytype-narrowframed-desc
+  category: BodyType
+  cost: 1
+  bodytype: narrowframed
+
+- type: trait
+  id: BodyTypeWidehipped
+  name: trait-bodytype-widehipped-name
+  description: trait-bodytype-widehipped-desc
+  category: BodyType
+  cost: 1
+  bodytype: widehipped
+
+- type: trait
+  id: BodyTypeLongtorsoed
+  name: trait-bodytype-longtorsoed-name
+  description: trait-bodytype-longtorsoed-desc
+  category: BodyType
+  cost: 1
+  bodytype: longtorsoed
+
+- type: trait
+  id: BodyTypeLonglegged
+  name: trait-bodytype-longlegged-name
+  description: trait-bodytype-longlegged-desc
+  category: BodyType
+  cost: 1
+  bodytype: longlegged
+
+- type: trait
+  id: BodyTypeShortarmed
+  name: trait-bodytype-shortlimbed-name
+  description: trait-bodytype-shortlimbed-desc
+  category: BodyType
+  cost: 1
+  bodytype: shortlimbed
+
+- type: trait
+  id: BodyTypeDelicateboned
+  name: trait-bodytype-delicateboned-name
+  description: trait-bodytype-delicateboned-desc
+  category: BodyType
+  cost: 1
+  bodytype: delicateboned
+
+- type: trait
+  id: BodyTypeSolidlybuilt
+  name: trait-bodytype-solidlybuilt-name
+  description: trait-bodytype-solidlybuilt-desc
+  category: BodyType
+  cost: 1
+  bodytype: solidlybuilt
+
+- type: trait
+  id: BodyTypeHourglass
+  name: trait-bodytype-hourglass-name
+  description: trait-bodytype-hourglass-desc
+  category: BodyType
+  cost: 1
+  bodytype: hourglass
+
+- type: trait
+  id: BodyTypeRectanglebuilt
+  name: trait-bodytype-rectanglebuilt-name
+  description: trait-bodytype-rectanglebuilt-desc
+  category: BodyType
+  cost: 1
+  bodytype: rectanglebuilt
+
+- type: trait
+  id: BodyTypePearshaped
+  name: trait-bodytype-pearshaped-name
+  description: trait-bodytype-pearshaped-desc
+  category: BodyType
+  cost: 1
+  bodytype: pearshaped
+
+- type: trait
+  id: BodyTypeDorito
+  name: trait-bodytype-invertedtriangle-name
+  description: trait-bodytype-invertedtriangle-desc
+  category: BodyType
+  cost: 1
+  bodytype: invertedtriangle
+
+- type: trait
+  id: BodyTypeThickthighed
+  name: trait-bodytype-thickthighed-name
+  description: trait-bodytype-thickthighed-desc
+  category: BodyType
+  cost: 1
+  bodytype: thickthighed
+
+- type: trait
+  id: BodyTypePixarmom
+  name: trait-bodytype-narrowwaisted-name
+  description: trait-bodytype-narrowwaisted-desc
+  category: BodyType
+  cost: 1
+  bodytype: narrowwaisted
+
+- type: trait
+  id: BodyTypeDense
+  name: trait-bodytype-densebuilt-name
+  description: trait-bodytype-densebuilt-desc
+  category: BodyType
+  cost: 1
+  bodytype: densebuilt
+
+- type: trait
+  id: BodyTypeBroad
+  name: trait-bodytype-broad-name
+  description: trait-bodytype-broad-desc
+  category: BodyType
+  cost: 1
+  bodytype: broad
+
+- type: trait
+  id: BodyTypeLightbuilt
+  name: trait-bodytype-lightlybuilt-name
+  description: trait-bodytype-lightlybuilt-desc
+  category: BodyType
+  cost: 1
+  bodytype: lightlybuilt
+
+- type: trait
+  id: BodyTypeRuggedlybuilt
+  name: trait-bodytype-ruggedlybuilt-name
+  description: trait-bodytype-ruggedlybuilt-desc
+  category: BodyType
+  cost: 1
+  bodytype: ruggedlybuilt
+
+- type: trait
+  id: BodyTypeBoring
+  name: trait-bodytype-average-name
+  description: trait-bodytype-average-desc
+  category: BodyType
+  cost: 1
+  bodytype: average
+
+- type: trait
+  id: BodyTypePlush
+  name: trait-bodytype-plush-name
+  description: trait-bodytype-plush-desc
+  category: BodyType
+  cost: 1
+  bodytype: plush
+
+- type: trait
+  id: BodyTypeChubby
+  name: trait-bodytype-chubby-name
+  description: trait-bodytype-chubby-desc
+  category: BodyType
+  cost: 1
+  bodytype: chubby
+
+- type: trait
+  id: BodyTypeFat
+  name: trait-bodytype-fat-name
+  description: trait-bodytype-fat-desc
+  category: BodyType
+  cost: 1
+  bodytype: fat
+
+- type: trait
+  id: BodyTypeObese
+  name: trait-bodytype-obese-name
+  description: trait-bodytype-obese-desc
+  category: BodyType
+  cost: 1
+  bodytype: obese
+
+- type: trait
+  id: BodyTypeMorbidlyobese
+  name: trait-bodytype-morbidlyobese-name
+  description: trait-bodytype-morbidlyobese-desc
+  category: BodyType
+  cost: 1
+  bodytype: morbidlyobese
+
+- type: trait
+  id: BodyTypeExtremelybuxom
+  name: trait-bodytype-extremelybuxom-name
+  description: trait-bodytype-extremelybuxom-desc
+  category: BodyType
+  cost: 1
+  bodytype: extremelybuxom
+

@@ -120,27 +120,40 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
 
     private void OnExamined(EntityUid uid, HumanoidAppearanceComponent component, ExaminedEvent args)
     {
-        var identity = Identity.Entity(uid, EntityManager);
-        var species = GetSpeciesRepresentation(component.Species, component.CustomSpecieName).ToLower();
-        var age = GetAgeRepresentation(component.Species, component.Age);
-
-        args.PushText(Loc.GetString("humanoid-appearance-component-examine", ("user", identity), ("age", age), ("species", species)));
-
-        // Calculate the current scale vs the base customization
-        var averageBase = (component.BaseHeight + component.BaseWidth) / 2.0f;
-        var averageCurrent = (component.Height + component.Width) / 2.0f;
-
-        // // Show base customization if different from normal (1.0)
-        // if (Math.Abs(averageBase - 1.0f) > 0.05f)
-        // {
-        //     args.PushMarkup(Loc.GetString("humanoid-appearance-component-examine-base-size", ("scale", averageBase.ToString("F2"))));
-        // }
-
-        // Show active size modification if different from base
-        if (Math.Abs(averageCurrent - averageBase) > 0.05f)
+        using (args.PushGroup(nameof(HumanoidAppearanceComponent), 1000))
         {
-            var modifier = averageCurrent / averageBase;
-            args.PushMarkup(Loc.GetString("humanoid-appearance-component-examine-modified-size", ("scale", averageCurrent.ToString("F2")), ("modifier", modifier.ToString("F2"))));
+            var identity = Identity.Entity(uid, EntityManager);
+            var species = GetSpeciesRepresentation(component.Species, component.CustomSpecieName).ToLower();
+            var age = GetAgeRepresentation(component.Species, component.Age);
+
+            args.PushText(
+                Loc.GetString(
+                    "humanoid-appearance-component-examine",
+                    ("user", identity),
+                    ("age", age),
+                    ("species", species)),
+                1000);
+
+            // Calculate the current scale vs the base customization
+            var averageBase = (component.BaseHeight + component.BaseWidth) / 2.0f;
+            var averageCurrent = (component.Height + component.Width) / 2.0f;
+
+            // // Show base customization if different from normal (1.0)
+            // if (Math.Abs(averageBase - 1.0f) > 0.05f)
+            // {
+            //     args.PushMarkup(Loc.GetString("humanoid-appearance-component-examine-base-size", ("scale", averageBase.ToString("F2"))));
+            // }
+
+            // Show active size modification if different from base
+            if (Math.Abs(averageCurrent - averageBase) > 0.05f)
+            {
+                var modifier = averageCurrent / averageBase;
+                args.PushMarkup(
+                    Loc.GetString(
+                        "humanoid-appearance-component-examine-modified-size",
+                        ("scale", averageCurrent.ToString("F2")),
+                        ("modifier", modifier.ToString("F2"))));
+            }
         }
     }
 

@@ -20,7 +20,7 @@
   priority: 3
 
 - type: consentToggle
-  id: CantSmellLewdScents
+  id: CanSmellLewdScents
   priority: 4
 
 - type: consentToggle

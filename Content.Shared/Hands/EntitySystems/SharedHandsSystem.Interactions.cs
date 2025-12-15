@@ -253,7 +253,7 @@ public abstract partial class SharedHandsSystem : EntitySystem
             else
                 held.Add(entity);
         }
-        using (args.PushGroup(nameof(HandsComponent)))
+        using (args.PushGroup(nameof(HandsComponent), -100))
         {
             var locUser = ("user", Identity.Entity(examinedUid, EntityManager));
 

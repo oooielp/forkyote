@@ -70,6 +70,11 @@ public sealed partial class TraitPrototype : IPrototype
     public ProtoId<HornyExaminePrototype>? HornyExamineProto;
 
     /// <summary>
+    /// bodytype descriptor key
+    /// </summary>
+    [DataField]
+    public string? Bodytype;
+
     /// Scents!
     /// </summary>
     [DataField("scentProtos")]

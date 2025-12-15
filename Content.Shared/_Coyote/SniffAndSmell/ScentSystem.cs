@@ -20,13 +20,13 @@ namespace Content.Shared._Coyote.SniffAndSmell;
 /// </summary>
 public sealed class ScentSystem : EntitySystem
 {
-    [Dependency] private readonly SharedTransformSystem    _transform      = default!;
-    [Dependency] private readonly SharedInteractionSystem  _interact       = default!;
-    [Dependency] private readonly IGameTiming              _time           = default!;
-    [Dependency] private readonly IRobustRandom            _rng            = default!;
-    [Dependency] private readonly SharedPopupSystem        _popupSystem    = default!;
-    [Dependency] private readonly SharedConsentSystem      _consent        = default!;
-    [Dependency] private readonly IPrototypeManager         _proto          = default!;
+    [Dependency] private readonly SharedTransformSystem _transform = default!;
+    [Dependency] private readonly SharedInteractionSystem _interact = default!;
+    [Dependency] private readonly IGameTiming _time = default!;
+    [Dependency] private readonly IRobustRandom _rng = default!;
+    [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
+    [Dependency] private readonly SharedConsentSystem _consent = default!;
+    [Dependency] private readonly IPrototypeManager _proto = default!;
 
     public TimeSpan BaseSmellCooldown = TimeSpan.FromSeconds(5);
     public TimeSpan NextSmellDetectionTime = TimeSpan.Zero;
@@ -85,6 +85,7 @@ public sealed class ScentSystem : EntitySystem
             };
             args.Verbs.Add(verb);
         }
+
         // and a verb to toggle being able to smell this smelly beast
         // trust me, its needed
         if (args.User == args.Target)
@@ -100,9 +101,51 @@ public sealed class ScentSystem : EntitySystem
             Act = () =>
             {
                 ToggleIgnoreSmell(smellerComp, scentComp);
+                var popupMsg = isIgnoringThem
+                    ? Loc.GetString(
+                        "scent-verb-unignore-popup",
+                        ("smelly", Identity.Entity(
+                            args.Target,
+                            EntityManager,
+                            args.User)))
+                    : Loc.GetString(
+                        "scent-verb-ignore-popup",
+                        ("smelly", Identity.Entity(
+                            args.Target,
+                            EntityManager,
+                            args.User)));
+                _popupSystem.PopupEntity(
+                    popupMsg,
+                    args.User,
+                    args.User,
+                    PopupType.MediumCautionLingering,
+                    false);
             }
         };
         args.Verbs.Add(toggleVerb);
+
+        // And, the blanket toggle passive detection verb
+        var passiveText = smellerComp.PassiveSmellDetectionEnabled ? "Ignore Scents" : "Notice Scents";
+        InteractionVerb passiveVerb = new()
+        {
+            Text = passiveText,
+            Priority = 0,
+            Category = VerbCategory.Interaction,
+            Act = () =>
+            {
+                smellerComp.PassiveSmellDetectionEnabled = !smellerComp.PassiveSmellDetectionEnabled;
+                var popupMsg = smellerComp.PassiveSmellDetectionEnabled
+                    ? Loc.GetString("scent-verb-passive-unignore-popup")
+                    : Loc.GetString("scent-verb-passive-ignore-popup");
+                _popupSystem.PopupEntity(
+                    popupMsg,
+                    args.User,
+                    args.User,
+                    PopupType.MediumCautionLingering,
+                    false);
+            }
+        };
+        args.Verbs.Add(passiveVerb);
     }
 
     /// <summary>
@@ -148,18 +191,18 @@ public sealed class ScentSystem : EntitySystem
                 continue;
             if (!LewdOkay(args.Examiner, proto.Lewd))
                 continue;
-            var smellColor = "Cyan";
+            var smellColor = "slateblue";
             if (proto.Stinky && proto.Lewd)
             {
-                smellColor = "Orange";
+                smellColor = "Magenta";
             }
             else if (proto.Lewd)
             {
-                smellColor = "Pink";
+                smellColor = "HotPink";
             }
             else if (proto.Stinky)
             {
-                smellColor = "Yellow";
+                smellColor = "GreenYellow";
             }
 
             var toAdd = _rng.Pick(proto.ScentsExamine);
@@ -175,9 +218,11 @@ public sealed class ScentSystem : EntitySystem
 
         if (scentDescriptions.Count == 0)
             return;
+        // shuffle descriptions
+        _rng.Shuffle(scentDescriptions);
         // combine descriptions
         // "They smell like X, Y, and Z."
-        var combinedDesc = string.Empty;
+        string combinedDesc;
         if (scentDescriptions.Count == 1)
         {
             combinedDesc = Loc.GetString(
@@ -203,7 +248,12 @@ public sealed class ScentSystem : EntitySystem
                 ("scents", string.Join(", ", allButLast)),
                 ("lastscent", last));
         }
-        args.PushMarkup(combinedDesc);
+        using (args.PushGroup("DanIsCool"))
+        {
+            // cus its easier to edit colors from code
+            combinedDesc = $"[color=aquamarine]{combinedDesc}[/color]";
+            args.PushMarkup(combinedDesc, 3); // between Physical and Personality
+        }
     }
 
     /// <summary>
@@ -781,7 +831,7 @@ public sealed class ScentSystem : EntitySystem
             return true;
         if (HasComp<AdminGhostComponent>(uid))
             return true;
-        return !_consent.HasConsent(uid, "CantSmellLewdScents");
+        return _consent.HasConsent(uid, "CanSmellLewdScents");
         // dont like the fact that consents default to *ON*
     }
    #endregion

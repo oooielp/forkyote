@@ -386,3 +386,140 @@ trait-scent-girlsmell-desc = You smell like girlsmell.
 trait-scent-spaceweed-name = Spaceweed
 trait-scent-spaceweed-desc = You smell like spaceweed.
 
+###### BODYTYPES!
+trait-bodytype-buxom-name             = Buxom
+trait-bodytype-buxom-desc             = You are pretty buxom!
+
+trait-bodytype-broadshouldered-name   = Broad-shouldered
+trait-bodytype-broadshouldered-desc   = You are pretty broad-shouldered!
+
+trait-bodytype-slender-name           = Slender
+trait-bodytype-slender-desc           = You are pretty slender!
+
+trait-bodytype-athletic-name          = Athletic
+trait-bodytype-athletic-desc          = You are pretty athletic!
+
+trait-bodytype-stocky-name            = Stocky
+trait-bodytype-stocky-desc            = You are pretty stocky!
+
+trait-bodytype-lithe-name             = Lithe
+trait-bodytype-lithe-desc             = You are pretty lithe!
+
+trait-bodytype-lean-name              = Lean
+trait-bodytype-lean-desc              = You are pretty lean!
+
+trait-bodytype-muscular-name          = Muscular
+trait-bodytype-muscular-desc          = You are pretty muscular!
+
+trait-bodytype-burly-name             = Burly
+trait-bodytype-burly-desc             = You are pretty burly!
+
+trait-bodytype-petite-name            = Petite
+trait-bodytype-petite-desc            = You are pretty petite!
+
+trait-bodytype-willowy-name           = Willowy
+trait-bodytype-willowy-desc           = You are pretty willowy!
+
+trait-bodytype-heavyset-name          = Heavyset
+trait-bodytype-heavyset-desc          = You are pretty heavyset!
+
+trait-bodytype-curvy-name             = Curvy
+trait-bodytype-curvy-desc             = You are pretty curvy!
+
+trait-bodytype-gangly-name            = Gangly
+trait-bodytype-gangly-desc            = You are pretty gangly!
+
+trait-bodytype-husky-name             = Husky
+trait-bodytype-husky-desc             = You are pretty husky!
+
+trait-bodytype-compact-name           = Compact
+trait-bodytype-compact-desc           = You are pretty compact!
+
+trait-bodytype-chiseled-name          = Chiseled
+trait-bodytype-chiseled-desc          = You are pretty chiseled!
+
+trait-bodytype-softbuilt-name         = Soft-built
+trait-bodytype-softbuilt-desc         = You are pretty soft-built!
+
+trait-bodytype-topheavy-name          = Top-heavy
+trait-bodytype-topheavy-desc          = You are pretty top-heavy!
+
+trait-bodytype-bottomheavy-name       = Bottom-heavy
+trait-bodytype-bottomheavy-desc       = You are pretty bottom-heavy!
+
+trait-bodytype-barrelchested-name     = Barrel-chested
+trait-bodytype-barrelchested-desc     = You are pretty barrel-chested!
+
+trait-bodytype-narrowframed-name      = Narrow-framed
+trait-bodytype-narrowframed-desc      = You are pretty narrow-framed!
+
+trait-bodytype-widehipped-name        = Wide-hipped
+trait-bodytype-widehipped-desc        = You are pretty wide-hipped!
+
+trait-bodytype-longtorsoed-name       = Long-torsoed
+trait-bodytype-longtorsoed-desc       = You are pretty long-torsoed!
+
+trait-bodytype-longlegged-name        = Long-legged
+trait-bodytype-longlegged-desc        = You are pretty long-legged!
+
+trait-bodytype-shortlimbed-name       = Short-limbed
+trait-bodytype-shortlimbed-desc       = You are pretty short-limbed!
+
+trait-bodytype-delicateboned-name     = Delicate-boned
+trait-bodytype-delicateboned-desc     = You are pretty delicate-boned!
+
+trait-bodytype-solidlybuilt-name      = Solidly-built
+trait-bodytype-solidlybuilt-desc      = You are pretty solidly-built!
+
+trait-bodytype-hourglass-name         = Hourglass
+trait-bodytype-hourglass-desc         = You are pretty hourglass shaped!
+
+trait-bodytype-rectanglebuilt-name    = Rectangle-built
+trait-bodytype-rectanglebuilt-desc    = You are pretty rectangle-built!
+
+trait-bodytype-pearshaped-name        = Pear-shaped
+trait-bodytype-pearshaped-desc        = You are pretty pear-shaped!
+
+trait-bodytype-invertedtriangle-name  = Inverted-triangle
+trait-bodytype-invertedtriangle-desc  = You are pretty inverted-triangular!
+
+trait-bodytype-thickthighed-name      = Thick-thighed
+trait-bodytype-thickthighed-desc      = You are pretty thick-thighed!
+
+trait-bodytype-narrowwaisted-name     = Narrow-waisted
+trait-bodytype-narrowwaisted-desc     = You are pretty narrow-waisted!
+
+trait-bodytype-densebuilt-name        = Densebuilt
+trait-bodytype-densebuilt-desc        = You are pretty densely built!
+
+trait-bodytype-broad-name             = Broad
+trait-bodytype-broad-desc             = You are pretty broad!
+
+trait-bodytype-lightlybuilt-name      = Lightly-built
+trait-bodytype-lightlybuilt-desc      = You are pretty lightly-built!
+
+trait-bodytype-ruggedlybuilt-name     = Ruggedly-built
+trait-bodytype-ruggedlybuilt-desc     = You are pretty ruggedly-built!
+
+trait-bodytype-average-name           = Average
+trait-bodytype-average-desc           = You are pretty average!
+
+trait-bodytype-plush-name             = Plush
+trait-bodytype-plush-desc             = You are kinda pudgy and soft!
+
+trait-bodytype-chubby-name            = Chubby
+trait-bodytype-chubby-desc            = You are pretty chubby!
+
+trait-bodytype-fat-name               = Fat
+trait-bodytype-fat-desc               = You are pretty fat!
+
+trait-bodytype-obese-name             = Obese
+trait-bodytype-obese-desc             = You are really fat!
+
+trait-bodytype-morbidlyobese-name     = Morbidly Obese
+trait-bodytype-morbidlyobese-desc     = You are extremely fat!
+
+trait-bodytype-extremelybuxom-name    = Extremely Buxom
+trait-bodytype-extremelybuxom-desc    = You have extremely massive breasts!
+
+

@@ -335,6 +335,17 @@ namespace Content.Shared.Examine
 
         private ExamineMessagePart? _currentGroupPart;
 
+        /// <summary>
+        ///     Predefined group priorities for known groups. Higher values are displayed first.
+        /// </summary>
+        /// <remarks>
+        ///     Bite me
+        /// </remarks>
+        private readonly Dictionary<string, int> _groupPriorities = new()
+        {
+            {"DanIsCool", 100},
+        };
+
         public ExaminedEvent(FormattedMessage message, EntityUid examined, EntityUid examiner, bool isInDetailsRange, bool hasDescription)
         {
             Message = message;
@@ -349,29 +360,29 @@ namespace Content.Shared.Examine
         /// </summary>
         public FormattedMessage GetTotalMessage()
         {
-            int Comparison(ExamineMessagePart a, ExamineMessagePart b)
-            {
-                // Try sort by priority, then group, then by string contents
-                if (a.Priority != b.Priority)
+            var parts = Parts
+                // first, sort by ingroup priority to ensure consistent ordering within groups
+                .OrderByDescending(p => p.InGroupPriority)
+                .ThenByDescending(p => p.Priority)
+                // Group parts by their group name. Ungrouped parts will have a null key.
+                .GroupBy(p => p.Group)
+                // Create a sortable structure for each group.
+                .Select(g => new
                 {
-                    // negative so that expected behavior is consistent with what makes sense
-                    // i.e. a negative priority should mean its at the bottom of the list, right?
-                    return -a.Priority.CompareTo(b.Priority);
-                }
+                    GroupName = g.Key,
+                    Priority = g.Max(p => p.Priority), // The group's priority is the highest priority of its parts
+                    Items = g.OrderByDescending(p => p.Priority),
+                })
+                // Order the groups themselves by their priority, then by name.
+                .OrderByDescending(g => g.Priority)
+                // Flatten the groups back into a single list of parts.
+                // For ungrouped items (GroupName == null), we need to sort them by their individual priority.
+                .SelectMany(g => g.GroupName == null
+                    ? g.Items.OrderByDescending(p => p.Priority) // Sort ungrouped items by their own priority
+                    : (IEnumerable<ExamineMessagePart>) g.Items) // Grouped items are already sorted correctly
+                .ToList();
 
-                if (a.Group != b.Group)
-                {
-                    return string.Compare(a.Group, b.Group, StringComparison.Ordinal);
-                }
-
-                return string.Compare(a.Message.ToString(), b.Message.ToString(), StringComparison.Ordinal);
-            }
-
-            // tolist/clone formatted message so calling this multiple times wont fuck shit up
-            // (if that happens for some reason)
-            var parts = Parts.ToList();
             var totalMessage = new FormattedMessage(Message);
-            parts.Sort(Comparison);
 
             if (_hasDescription && parts.Count > 0)
             {
@@ -396,11 +407,17 @@ namespace Content.Shared.Examine
         ///     sort messages the same as well as grouped together properly, even if subscriptions are different.
         ///     You should wrap it in a using() block so popping automatically occurs.
         /// </summary>
-        public ExamineGroupDisposable PushGroup(string groupName, int priority=0)
+        public ExamineGroupDisposable PushGroup(string groupName, int groupPriority = 0)
         {
             // Ensure that other examine events correctly ended their groups.
             DebugTools.Assert(_currentGroupPart == null);
-            _currentGroupPart = new ExamineMessagePart(new FormattedMessage(), priority, false, groupName);
+            groupPriority = _groupPriorities.GetValueOrDefault(groupName, groupPriority);
+            _currentGroupPart = new ExamineMessagePart(
+                new FormattedMessage(),
+                groupPriority,
+                false,
+                groupName,
+                groupPriority);
             return new ExamineGroupDisposable(this);
         }
 
@@ -426,19 +443,31 @@ namespace Content.Shared.Examine
         /// </summary>
         /// <seealso cref="PushMarkup"/>
         /// <seealso cref="PushText"/>
-        public void PushMessage(FormattedMessage message, int priority=0)
+        public void PushMessage(FormattedMessage message, int priority = 0)
         {
             if (message.Nodes.Count == 0)
                 return;
 
             if (_currentGroupPart != null)
             {
-                message.PushNewline();
-                _currentGroupPart.Message.AddMessage(message);
+                var gPriority = _currentGroupPart.Priority;
+                var gName = _currentGroupPart.Group;
+                Parts.Add(
+                    new ExamineMessagePart(
+                        message,
+                        priority,
+                        true,
+                        gName,
+                        gPriority));
             }
             else
             {
-                Parts.Add(new ExamineMessagePart(message, priority, true, null));
+                Parts.Add(
+                    new ExamineMessagePart(
+                        message,
+                        priority,
+                        true,
+                        null));
             }
         }
 
@@ -449,7 +478,7 @@ namespace Content.Shared.Examine
         /// </summary>
         /// <seealso cref="PushText"/>
         /// <seealso cref="PushMessage"/>
-        public void PushMarkup(string markup, int priority=0)
+        public void PushMarkup(string markup, int priority = 0)
         {
             PushMessage(FormattedMessage.FromMarkupOrThrow(markup), priority);
         }
@@ -461,7 +490,7 @@ namespace Content.Shared.Examine
         /// </summary>
         /// <seealso cref="PushMarkup"/>
         /// <seealso cref="PushMessage"/>
-        public void PushText(string text, int priority=0)
+        public void PushText(string text, int priority = 0)
         {
             var msg = new FormattedMessage();
             msg.AddText(text);
@@ -482,11 +511,25 @@ namespace Content.Shared.Examine
 
             if (_currentGroupPart != null)
             {
-                _currentGroupPart.Message.AddMessage(message);
+                var gPriority = _currentGroupPart.Priority;
+                var gName = _currentGroupPart.Group;
+                Parts.Add(
+                    new ExamineMessagePart(
+                        message,
+                        priority,
+                        false,
+                        gName,
+                        gPriority));
+
             }
             else
             {
-                Parts.Add(new ExamineMessagePart(message, priority, false, null));
+                Parts.Add(
+                    new ExamineMessagePart(
+                        message,
+                        priority,
+                        false,
+                        null));
             }
         }
 
@@ -497,9 +540,11 @@ namespace Content.Shared.Examine
         /// </summary>
         /// <seealso cref="AddText"/>
         /// <seealso cref="AddMessage"/>
-        public void AddMarkup(string markup, int priority=0)
+        public void AddMarkup(string markup, int priority = 0)
         {
-            AddMessage(FormattedMessage.FromMarkupOrThrow(markup), priority);
+            AddMessage(
+                FormattedMessage.FromMarkupOrThrow(markup),
+                priority);
         }
 
         /// <summary>
@@ -509,7 +554,7 @@ namespace Content.Shared.Examine
         /// </summary>
         /// <seealso cref="AddMarkup"/>
         /// <seealso cref="AddMessage"/>
-        public void AddText(string text, int priority=0)
+        public void AddText(string text, int priority = 0)
         {
             var msg = new FormattedMessage();
             msg.AddText(text);
@@ -531,7 +576,12 @@ namespace Content.Shared.Examine
             }
         }
 
-        private record ExamineMessagePart(FormattedMessage Message, int Priority, bool DoNewLine, string? Group);
+        private record ExamineMessagePart(
+            FormattedMessage Message,
+            int Priority,
+            bool DoNewLine,
+            string? Group,
+            int InGroupPriority = 0);
     }
 
 
