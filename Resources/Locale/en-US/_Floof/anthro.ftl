@@ -1317,3 +1317,21 @@ marking-Hairupdogeneric = Hair Updo Extension
 marking-Hairupdogeneric-hairupdogeneric = Hair Updo Extension
 marking-Drillandbunhair = Hair Drill and Bun Extension
 marking-Drillandbunhair-hair_drillandbun = Hair Drill and Bun Extension
+
+# wingus
+
+marking-CoyoteWingsDragon-m_insect_wings_dragon_alt_BEHIND_A  = Dragon Wings Alt (Primary)
+marking-CoyoteWingsDragon-m_insect_wings_dragon_alt_BEHIND_B  = Dragon Wings Alt (Secondary)
+marking-CoyoteWingsDragon-m_insect_wings_dragon_alt_FRONT_A   = Dragon Wings Alt (Primary)
+marking-CoyoteWingsDragon-m_insect_wings_dragon_alt_FRONT_B   = Dragon Wings Alt (Secondary)
+marking-CoyoteWingsDragon = Dragon Wings Alt
+
+marking-CoyoteWingsSepulchre-m_insect_wings_sepulchre_BEHIND_B  = Sepulchre
+marking-CoyoteWingsSepulchre-m_insect_wings_sepulchre_FRONT_B   = Sepulchre
+marking-CoyoteWingsSepulchre = Sepulchre
+
+marking-CoyoteWingsSuccubus-m_insect_wings_succubus_BEHIND_B  = Succubus
+marking-CoyoteWingsSuccubus-m_insect_wings_succubus_FRONT_B   = Succubus
+marking-CoyoteWingsSuccubus = Succubus
+
+
