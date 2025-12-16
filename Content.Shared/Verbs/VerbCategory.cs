@@ -9,7 +9,10 @@ namespace Content.Shared.Verbs
     [Serializable, NetSerializable]
     public sealed class VerbCategory
     {
-        public readonly string Text;
+        private readonly string _textKey;
+        private string? _cachedText;
+
+        public string Text => _cachedText ??= Loc.GetString(_textKey);
 
         public readonly SpriteSpecifier? Icon;
 
@@ -30,7 +33,7 @@ namespace Content.Shared.Verbs
 
         public VerbCategory(string text, string? icon, bool iconsOnly = false)
         {
-            Text = Loc.GetString(text);
+            _textKey = text;
             Icon = icon == null ? null : new SpriteSpecifier.Texture(new(icon));
             IconsOnly = iconsOnly;
         }
