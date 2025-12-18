@@ -338,14 +338,14 @@ public abstract class SharedInteractionVerbsSystem : EntitySystem
         };
         // ensure the categories stay in order
         verb.Priority = proto.Priority 
-                        + proto.CategoryKey switch
-                            {
-                                "interact-sfw" => 500,
-                                "interact-nsfw" => 250,
-                                "actions" => 100,
-                                "examine-group" => 1000,
-                                _ => 0
-                            };
+            + proto.CategoryKey switch
+                {
+                    "interact-sfw" => 500,
+                    "interact-nsfw" => 250,
+                    "actions" => 100,
+                    "examine-group" => 1000,
+                    _ => 0
+                };
     }
 
     /// <summary>
@@ -403,12 +403,13 @@ public abstract class SharedInteractionVerbsSystem : EntitySystem
             specifier.Popup,
             target,
             specifier);
-        var makeSoundObvious = specifier.SoundPerceivedByOthers
-                                   || (specifier.ObviousIfTargetIsNonPlayer
-                                       && prePlopup is not null
-                                       && plopup is not null
-                                       && plopup != prePlopup
-                                       && specifier.MakeSoundSubtleIfObviousIfTargetIsNonPlayerIsTrue);
+        var makeSoundObvious = 
+            specifier.SoundPerceivedByOthers
+            || (specifier.ObviousIfTargetIsNonPlayer
+               && prePlopup is not null
+               && plopup is not null
+               && plopup != prePlopup
+               && specifier.MakeSoundSubtleIfObviousIfTargetIsNonPlayerIsTrue);
         // Popups
         if (_protoMan.TryIndex(plopup, out var popup))
         {
@@ -460,7 +461,7 @@ public abstract class SharedInteractionVerbsSystem : EntitySystem
         else
             _popups.PopupEntity(message, target, filter, recordReplay, popup.PopupType);
     }
-    
+
     private ProtoId<InteractionPopupPrototype>? GetPopupKind(
         ProtoId<InteractionPopupPrototype>? protoId, 
         EntityUid target,
