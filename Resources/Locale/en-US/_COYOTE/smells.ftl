@@ -532,6 +532,12 @@ scent-kitchen-direct       = {CAPITALIZE($src)} smells like a kitchen.
 scent-kitchen-close        = You smell a trace of a kitchen.
 scent-kitchen-far          = You catch a faint whiff of a kitchen.
 
+# blood
+scent-blood-examine      = blood
+scent-blood-direct       = {CAPITALIZE($src)} smells like blood.
+scent-blood-close        = You smell a trace of a blood.
+scent-blood-far          = You catch a faint whiff of a blood.
+
 # bankcustomers
 scent-bankcustomers-examine      = bank customers
 scent-bankcustomers-direct       = {CAPITALIZE($src)} smells like bank customers.

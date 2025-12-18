@@ -1213,10 +1213,25 @@
   - scent-kitchen-far
 
 - type: scent
+  id: Blood
+  isStinky: true
+  parent:
+  - ScentBase
+  msgsExamine:
+  - scent-blood-examine
+  msgsDirect:
+  - scent-blood-direct
+  msgsClose:
+  - scent-blood-close
+  msgsFar:
+  - scent-blood-far
+
+- type: scent
   id: BankCustomers
   parent:
   - ScentBase
   isLewd: true
+  isStinky: true
   msgsExamine:
   - scent-bankcustomers-examine
   msgsDirect:

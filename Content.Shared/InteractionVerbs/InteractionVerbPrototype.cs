@@ -223,6 +223,13 @@ public sealed partial class InteractionVerbPrototype : IPrototype, IInheritingPr
         /// </summary>
         [DataField]
         public bool SoundPerceivedByOthers = true;
+        
+        /// <summary>
+        ///     If true, then the popup will be obvious if the target is a non-player entity.
+        ///     Also the sound
+        /// </summary>
+        [DataField]
+        public bool ObviousIfTargetIsNonPlayer = false;
 
         [DataField]
         public AudioParams SoundParams = new AudioParams()

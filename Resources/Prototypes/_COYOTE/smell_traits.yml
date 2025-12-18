@@ -748,6 +748,15 @@
   - Kitchen
 
 - type: trait
+  id: ScentBlood
+  name: trait-scent-blood-name
+  description: trait-scent-kitchen-desc
+  category: Scents
+  cost: 1
+  scentProtos:
+  - Blood
+
+- type: trait
   id: ScentBankCustomers
   name: trait-scent-bankcustomers-name
   description: trait-scent-bankcustomers-desc

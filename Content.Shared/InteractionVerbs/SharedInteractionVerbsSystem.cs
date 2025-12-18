@@ -7,6 +7,7 @@ using Content.Shared.Ghost;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Interaction;
 using Content.Shared.InteractionVerbs.Events;
+using Content.Shared.Mind.Components;
 using Content.Shared.Popups;
 using Content.Shared.Verbs;
 using Robust.Shared.Audio.Systems;
@@ -324,7 +325,6 @@ public abstract class SharedInteractionVerbsSystem : EntitySystem
         verb.Text = proto.Name;
         verb.Message = proto.Description;
         verb.DoContactInteraction = proto.DoContactInteraction;
-        verb.Priority = proto.Priority;
         verb.Icon = proto.Icon;
 
         // Set category based on the CategoryKey, or default to Interaction
@@ -336,6 +336,16 @@ public abstract class SharedInteractionVerbsSystem : EntitySystem
             "examine-group" => VerbCategory.ExamineGroup,
             _ => VerbCategory.Interaction
         };
+        // ensure the categories stay in order
+        verb.Priority = proto.Priority 
+                        + proto.CategoryKey switch
+                            {
+                                "interact-sfw" => 500,
+                                "interact-nsfw" => 250,
+                                "actions" => 100,
+                                "examine-group" => 1000,
+                                _ => 0
+                            };
     }
 
     /// <summary>
@@ -386,8 +396,19 @@ public abstract class SharedInteractionVerbsSystem : EntitySystem
         var othersTarget = specifier.EffectTarget is Target or UserThenTarget ? target : user;
         var othersFilter = Filter.Pvs(othersTarget).RemoveWhereAttachedEntity(ent => ent == user || ent == target);
 
+        // if the effect is subtle, and the target is a non-player entity, and the thing is set to do that
+        // then make it obvious instead
+        var prePlopup = specifier.Popup;
+        var plopup = GetPopupKind(
+            specifier.Popup,
+            target,
+            specifier);
+        var makeSoundObvious = specifier.ObviousIfTargetIsNonPlayer
+            && prePlopup is not null
+            && plopup is not null
+            && plopup != prePlopup;
         // Popups
-        if (_protoMan.TryIndex(specifier.Popup, out var popup))
+        if (_protoMan.TryIndex(plopup, out var popup))
         {
             var locPrefix = $"interaction-{proto.ID}-{prefix.ToString().ToLower()}";
 
@@ -422,8 +443,9 @@ public abstract class SharedInteractionVerbsSystem : EntitySystem
             // TODO we have a choice between having an accurate sound source or saving on an entity spawn...
             _audio.PlayEntity(sound, Filter.Entities(user, target), target, false, specifier.SoundParams);
 
-            if (specifier.SoundPerceivedByOthers)
-                _audio.PlayEntity(sound, othersFilter, othersTarget, false, specifier.SoundParams);
+            if (specifier.SoundPerceivedByOthers || makeSoundObvious)
+                _audio.PlayEntity(sound, othersFilter, othersTarget, false,
+                    specifier.SoundParams);
         }
     }
 
@@ -435,6 +457,24 @@ public abstract class SharedInteractionVerbsSystem : EntitySystem
             SendChatLog(message, target, filter, popup, clip);
         else
             _popups.PopupEntity(message, target, filter, recordReplay, popup.PopupType);
+    }
+    
+    private ProtoId<InteractionPopupPrototype>? GetPopupKind(
+        ProtoId<InteractionPopupPrototype>? protoId, 
+        EntityUid target,
+        InteractionVerbPrototype.EffectSpecifier fx)
+    {
+        if (protoId is null
+            || !_protoMan.TryIndex(protoId.Value, out var specifier)
+            || specifier.ID != "Subtle"
+            || !fx.ObviousIfTargetIsNonPlayer)
+            return protoId;
+        if (!TryComp<MindContainerComponent>(target, out var mindCtrl)
+            || !mindCtrl.HasHadMind)
+        {
+            return "Obvious";
+        }
+        return protoId;
     }
 
     protected virtual void SendChatLog(string message, EntityUid source, Filter filter, InteractionPopupPrototype popup, bool clip)

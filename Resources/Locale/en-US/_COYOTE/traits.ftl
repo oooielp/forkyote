@@ -606,6 +606,9 @@ trait-scent-fastfood-desc = You smell kinda like Fast Food!
 trait-scent-kitchen-name = Kitchen
 trait-scent-kitchen-desc = You smell kinda like the Kitchen!
 
+trait-scent-blood-name = Blood
+trait-scent-blood-desc = You smell kinda like blood!
+
 trait-scent-bankcustomers-name = Bank Customers
 trait-scent-bankcustomers-desc = You smell kinda like Bank Customers!
 

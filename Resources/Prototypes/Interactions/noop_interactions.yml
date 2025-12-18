@@ -144,10 +144,10 @@
   parent: BaseGlobal
   priority: 4
   requiresHands: false
-  requiresCanInteract: false
+  requiresCanInteract: true
   contactInteraction: false
   allowSelfInteract: false
-  range: {max: 20}
+  range: {max: 2}
   categoryKey: interact-nsfw
   effectSuccess:
     popup: Obvious
@@ -219,6 +219,24 @@
     popup: Obvious
     sound: {path: /Audio/Floof/Lewd/blush.ogg}
     soundPerceivedByOthers: true
+  action:
+    !type:NoOpAction
+
+- type: Interaction
+  id: Nuzzle
+  parent: BaseGlobal
+  priority: 4
+  requiresHands: false
+  requiresCanInteract: true
+  contactInteraction: false
+  allowSelfInteract: false
+  range: {max: 2}
+  categoryKey: interact-nsfw
+  effectSuccess:
+    popup: Subtle
+    obviousIfTargetIsNonPlayer: true
+    sound: {path: /Audio/Floof/Lewd/blush.ogg}
+    soundPerceivedByOthers: false
   action:
     !type:NoOpAction
 

@@ -100,4 +100,9 @@ interaction-WinkSelf-success-self-popup = You wink!
 interaction-WinkSelf-success-target-popup = {THE($user)} winks!
 interaction-WinkSelf-success-others-popup = {THE($user)} winks!
 
+interaction-Nuzzle-name = Nuzzle
+interaction-Nuzzle-success-self-popup = You nuzzle {THE($target)}!
+interaction-Nuzzle-success-target-popup = {THE($user)} nuzzles {THE($target)}!
+interaction-Nuzzle-success-others-popup = {THE($user)} nuzzles {THE($target)}!
+
 
