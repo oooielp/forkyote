@@ -23,7 +23,7 @@ horny-bodytype-broadshouldered-brief         = broad-shouldered
 horny-bodytype-slender-descriptive           = {CAPITALIZE(SUBJECT($them))} {CONJUGATE-BASIC($them, "have", "has")} a thin, lightly built frame
 horny-bodytype-slender-brief                 = slender
 
-horny-bodytype-athletic-descriptive          = {CAPITALIZE(POSS-ADJ($them))}
+horny-bodytype-athletic-descriptive          = {CAPITALIZE(POSS-ADJ($them))} {CONJUGATE-BASIC($them, "appear", "appears")} fit and athletic
 horny-bodytype-athletic-brief                = athletic
 
 horny-bodytype-stocky-descriptive            = {CAPITALIZE(SUBJECT($them))} {CONJUGATE-BASIC($them, "are", "is")} short and solidly built
@@ -149,3 +149,41 @@ horny-bodytype-morbidlyobese-brief           = morbidly obese
 horny-bodytype-extremelybuxom-descriptive    = {CAPITALIZE(SUBJECT($them))} {CONJUGATE-BASIC($them, "have", "has")} some extremely massive breasts
 horny-bodytype-extremelybuxom-brief          = extremely buxom
 
+horny-examine-morphable-descriptive            = STONKTHEIR body seems a bit amorphous.
+horny-examine-morphable-brief                  = morphable
+
+horny-examine-swimmer-descriptive              = STONKTHEYHAVE a long, swimmer's body.
+horny-examine-swimmer-brief                    = swimmer
+
+horny-examine-androgynous-descriptive          = STONKTHEYSEEM rather androgynous.
+horny-examine-androgynous-brief                = androgynous
+
+horny-examine-masculinepresenting-descriptive  = STONKTHEYSEEM to be rather masculine-presenting.
+horny-examine-masculinepresenting-brief        = masculine presenting
+
+horny-examine-femininepresenting-descriptive   = STONKTHEYSEEM to be rather feminine-presenting.
+horny-examine-femininepresenting-brief         = feminine presenting
+
+horny-examine-fluffy-descriptive               = STONKTHEYLOOK soft and fluffy!
+horny-examine-fluffy-brief                     = fluffy
+
+horny-examine-extremelyfluffy-descriptive      = STONKTHEYLOOK REALLY soft and REALLY fluffy!
+horny-examine-extremelyfluffy-brief            = extremely fluffy
+
+horny-examine-jacked-descriptive               = STONKTHEYARE absolutely RIPPED!
+horny-examine-jacked-brief                     = jacked
+
+horny-examine-shortstack-descriptive           = STONKTHEY are short and well filled out!
+horny-examine-shortstack-brief                 = shortstack
+
+horny-examine-buttsum-descriptive              = STONKTHEY got a butt built like a brick house!
+horny-examine-buttsum-brief                    = buttsum
+
+horny-examine-extremelybuttsum-descriptive     = STONKTHEY have a rear end that might have its own gravity well!
+horny-examine-extremelybuttsum-brief           = extremely buttsum
+
+horny-examine-flatchested-descriptive          = STONKTHEY are pretty flat chested!
+horny-examine-flatchested-brief                = flatchested
+
+horny-examine-flatassed-descriptive            = STONKTHEY have a flat rear end!
+horny-examine-flatassed-brief                  = flatassed
