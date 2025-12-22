@@ -2,6 +2,7 @@ using System.IO;
 using System.Linq;
 using System.Numerics;
 using Content.Shared.CCVar;
+using Content.Shared.Consent;
 using Content.Shared.Decals;
 using Content.Shared.Examine;
 using Content.Shared.Humanoid.Markings;
@@ -54,7 +55,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         SubscribeLocalEvent<HumanoidAppearanceComponent, ExaminedEvent>(OnExamined);
     }
 
-    public DataNode ToDataNode(HumanoidCharacterProfile profile)
+    public DataNode ToDataNode(HumanoidCharacterProfile profile, PlayerConsentSettings? consentSettings = null)
     {
         var export = new HumanoidProfileExport()
         {
@@ -62,14 +63,19 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
             Profile = profile,
         };
 
-        var dataNode = _serManager.WriteValue(
-            export,
-            alwaysWrite: true,
-            notNullableOverride: true);
+        // Include consent data if provided
+        if (consentSettings != null)
+        {
+            export.CharacterConsentFreetext = consentSettings.CharacterFreetext;
+            export.AccountConsentFreetext = consentSettings.Freetext;
+            export.ConsentToggles = consentSettings.Toggles;
+        }
+
+        var dataNode = _serManager.WriteValue(export, alwaysWrite: true, notNullableOverride: true);
         return dataNode;
     }
 
-    public HumanoidCharacterProfile FromStream(Stream stream, ICommonSession session)
+    public (HumanoidCharacterProfile profile, PlayerConsentSettings? consent) FromStream(Stream stream, ICommonSession session)
     {
         using var reader = new StreamReader(stream, EncodingHelpers.UTF8);
         var yamlStream = new YamlStream();
@@ -85,7 +91,19 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         var profile = export.Profile;
         var collection = IoCManager.Instance;
         profile.EnsureValid(session, collection!);
-        return profile;
+
+        // Extract consent data if present
+        PlayerConsentSettings? consent = null;
+        if (export.CharacterConsentFreetext != null || export.AccountConsentFreetext != null || export.ConsentToggles != null)
+        {
+            consent = new PlayerConsentSettings(
+                export.AccountConsentFreetext ?? string.Empty,
+                export.CharacterConsentFreetext ?? string.Empty,
+                export.ConsentToggles ?? new Dictionary<ProtoId<ConsentTogglePrototype>, string>()
+            );
+        }
+
+        return (profile, consent);
     }
 
     private void OnInit(EntityUid uid, HumanoidAppearanceComponent humanoid, ComponentInit args)
