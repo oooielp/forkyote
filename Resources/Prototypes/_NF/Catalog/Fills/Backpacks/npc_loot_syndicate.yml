@@ -541,8 +541,8 @@
   - type: SpawnItemsOnUse
     items:
       - id: NFWeaponPistolViperExpedition
-      - id: NFMagazineHighCapacityPistol35Uranium
-      - id: NFMagazineHighCapacityPistol35Uranium
+      - id: CSMagazinePistol40Uranium # Coyote: .40 conversion
+      - id: CSMagazinePistol40Uranium # Coyote: .40 conversion
         prob: 0.2
       - id: SpaceCash1000
       # Bonus Loot T1
