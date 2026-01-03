@@ -598,7 +598,7 @@
         whitelist:
           components:
             - Stunbaton
-            - SecStunbaton
+            - SecStunbaton # Coyote: Added SecStunbaton
         priority: 2
   - type: ItemMapper
     mapLayers:
@@ -606,7 +606,7 @@
         whitelist:
           components:
             - Stunbaton
-            - SecStunbaton
+            - SecStunbaton # Coyote: Added SecStunbaton
     sprite: _NF/Objects/Vehicles/hoverbike.rsi
   - type: Appearance
   - type: RotatingLight
@@ -643,7 +643,7 @@
         whitelist:
           components:
             - Stunbaton
-            - SecStunbaton
+            - SecStunbaton # Coyote: Added SecStunbaton
         priority: 2
 
 # Pirate
