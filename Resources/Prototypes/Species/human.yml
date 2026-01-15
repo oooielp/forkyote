@@ -36,6 +36,10 @@
     RArm: MobHumanRArm
     LHand: MobHumanLHand
     RHand: MobHumanRHand
+    LLegBehind: MobHumanoidAnyMarking
+    RLegBehind: MobHumanoidAnyMarking
+    LFootBehind: MobHumanoidAnyMarking
+    RFootBehind: MobHumanoidAnyMarking
     LLeg: MobHumanLLeg
     RLeg: MobHumanRLeg
     LFoot: MobHumanLFoot
@@ -163,24 +167,56 @@
   baseSprite:
     sprite: Mobs/Species/Human/parts.rsi
     state: torso_m
+  altSprites:
+    Digitigrade: DigilegHumanTorsoMaleSkintoned
 
 - type: humanoidBaseSprite
   id: MobHumanTorsoMale
   baseSprite:
     sprite: Mobs/Species/Human/parts.rsi
     state: torso_m
+  altSprites:
+    Digitigrade: DigilegHumanTorsoMaleSkintoned
 
 - type: humanoidBaseSprite
   id: MobHumanTorsoFemale
   baseSprite:
     sprite: Mobs/Species/Human/parts.rsi
     state: torso_f
+  altSprites:
+    Digitigrade: DigilegHumanTorsoFemaleSkintoned
 
 - type: humanoidBaseSprite
   id: MobHumanLLeg
   baseSprite:
     sprite: Mobs/Species/Human/parts.rsi
     state: l_leg
+  altSprites:
+    Digitigrade: DigilegPawLegLeft
+
+- type: humanoidBaseSprite
+  id: MobHumanLFoot
+  baseSprite:
+    sprite: Mobs/Species/Human/parts.rsi
+    state: l_foot
+  altSprites:
+    Digitigrade: DigilegPawFootLeft
+
+- type: humanoidBaseSprite
+  id: MobHumanRLeg
+  baseSprite:
+    sprite: Mobs/Species/Human/parts.rsi
+    state: r_leg
+  altSprites:
+    Digitigrade: DigilegPawLegRight
+
+- type: humanoidBaseSprite
+  id: MobHumanRFoot
+  baseSprite:
+    sprite: Mobs/Species/Human/parts.rsi
+    state: r_foot
+  altSprites:
+    Digitigrade: DigilegPawFootRight
 
 - type: humanoidBaseSprite
   id: MobHumanLArm
@@ -195,18 +231,6 @@
     state: l_hand
 
 - type: humanoidBaseSprite
-  id: MobHumanLFoot
-  baseSprite:
-    sprite: Mobs/Species/Human/parts.rsi
-    state: l_foot
-
-- type: humanoidBaseSprite
-  id: MobHumanRLeg
-  baseSprite:
-    sprite: Mobs/Species/Human/parts.rsi
-    state: r_leg
-
-- type: humanoidBaseSprite
   id: MobHumanRArm
   baseSprite:
     sprite: Mobs/Species/Human/parts.rsi
@@ -217,9 +241,3 @@
   baseSprite:
     sprite: Mobs/Species/Human/parts.rsi
     state: r_hand
-
-- type: humanoidBaseSprite
-  id: MobHumanRFoot
-  baseSprite:
-    sprite: Mobs/Species/Human/parts.rsi
-    state: r_foot

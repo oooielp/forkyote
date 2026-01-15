@@ -30,6 +30,10 @@
     RHand: MobSlimeRHand
     LLeg: MobSlimeLLeg
     RLeg: MobSlimeRLeg
+    LLegBehind: MobHumanoidAnyMarking
+    RLegBehind: MobHumanoidAnyMarking
+    LFootBehind: MobHumanoidAnyMarking
+    RFootBehind: MobHumanoidAnyMarking
     LFoot: MobSlimeLFoot
     RFoot: MobSlimeRFoot
     TailBehind: MobHumanoidAnyMarking
@@ -149,30 +153,56 @@
   baseSprite:
     sprite: Mobs/Species/Slime/parts.rsi
     state: torso_m
+  altSprites:
+    Digitigrade: DigilegLumiTorsoMale
 
 - type: humanoidBaseSprite
   id: MobSlimeTorsoMale
   baseSprite:
     sprite: Mobs/Species/Slime/parts.rsi
     state: torso_m
+  altSprites:
+    Digitigrade: DigilegLumiTorsoMale
 
 - type: humanoidBaseSprite
   id: MobSlimeTorsoFemale
   baseSprite:
     sprite: Mobs/Species/Slime/parts.rsi
     state: torso_f
+  altSprites:
+    Digitigrade: DigilegLumiTorsoFemale
 
 - type: humanoidBaseSprite
   id: MobSlimeLLeg
   baseSprite:
     sprite: Mobs/Species/Slime/parts.rsi
     state: l_leg
+  altSprites:
+    Digitigrade: DigilegPawSlimeLegLeft
 
 - type: humanoidBaseSprite
-  id: MobSlimeLArm
+  id: MobSlimeLFoot
   baseSprite:
     sprite: Mobs/Species/Slime/parts.rsi
-    state: l_arm
+    state: l_foot
+  altSprites:
+    Digitigrade: DigilegPawSlimeFootLeft
+
+- type: humanoidBaseSprite
+  id: MobSlimeRLeg
+  baseSprite:
+    sprite: Mobs/Species/Slime/parts.rsi
+    state: r_leg
+  altSprites:
+    Digitigrade: DigilegPawSlimeLegRight
+
+- type: humanoidBaseSprite
+  id: MobSlimeRFoot
+  baseSprite:
+    sprite: Mobs/Species/Slime/parts.rsi
+    state: r_foot
+  altSprites:
+    Digitigrade: DigilegPawSlimeFootRight
 
 - type: humanoidBaseSprite
   id: MobSlimeLHand
@@ -181,16 +211,10 @@
     state: l_hand
 
 - type: humanoidBaseSprite
-  id: MobSlimeLFoot
+  id: MobSlimeLArm
   baseSprite:
     sprite: Mobs/Species/Slime/parts.rsi
-    state: l_foot
-
-- type: humanoidBaseSprite
-  id: MobSlimeRLeg
-  baseSprite:
-    sprite: Mobs/Species/Slime/parts.rsi
-    state: r_leg
+    state: l_arm
 
 - type: humanoidBaseSprite
   id: MobSlimeRArm
@@ -203,9 +227,3 @@
   baseSprite:
     sprite: Mobs/Species/Slime/parts.rsi
     state: r_hand
-
-- type: humanoidBaseSprite
-  id: MobSlimeRFoot
-  baseSprite:
-    sprite: Mobs/Species/Slime/parts.rsi
-    state: r_foot

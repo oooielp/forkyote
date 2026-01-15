@@ -38,6 +38,10 @@
     RHand: MobHarpyRHand
     LLeg: MobHarpyLLeg
     RLeg: MobHarpyRLeg
+    LLegBehind: MobHumanoidAnyMarking
+    RLegBehind: MobHumanoidAnyMarking
+    LFootBehind: MobHumanoidAnyMarking
+    RFootBehind: MobHumanoidAnyMarking
     LFoot: MobHarpyLFoot
     RFoot: MobHarpyRFoot
     RArmExtension: MobHumanoidAnyMarking # Frontier
@@ -153,48 +157,56 @@
   baseSprite:
     sprite: _DV/Mobs/Species/Harpy/parts.rsi
     state: torso_m
+  altSprites:
+    Digitigrade: DigilegHumanTorsoMaleSkintoned
 
 - type: humanoidBaseSprite
   id: MobHarpyTorsoMale
   baseSprite:
     sprite: _DV/Mobs/Species/Harpy/parts.rsi
     state: torso_m
+  altSprites:
+    Digitigrade: DigilegHumanTorsoMaleSkintoned
 
 - type: humanoidBaseSprite
   id: MobHarpyTorsoFemale
   baseSprite:
     sprite: _DV/Mobs/Species/Harpy/parts.rsi
     state: torso_f
+  altSprites:
+    Digitigrade: DigilegHumanTorsoFemaleSkintoned
 
 - type: humanoidBaseSprite
   id: MobHarpyLLeg
   baseSprite:
     sprite: _DV/Mobs/Species/Harpy/parts.rsi
     state: l_leg
-
-- type: humanoidBaseSprite
-  id: MobHarpyLHand
-  baseSprite:
-    sprite: _DV/Mobs/Species/Harpy/parts.rsi
-    state: l_hand
-
-- type: humanoidBaseSprite
-  id: MobHarpyLArm
-  baseSprite:
-    sprite: _DV/Mobs/Species/Harpy/parts.rsi
-    state: l_arm
+  altSprites:
+    Digitigrade: DigilegAvianLegLeft
 
 - type: humanoidBaseSprite
   id: MobHarpyLFoot
   baseSprite:
     sprite: _DV/Mobs/Species/Harpy/parts.rsi
     state: l_foot
+  altSprites:
+    Digitigrade: DigilegAvianFootLeft
 
 - type: humanoidBaseSprite
   id: MobHarpyRLeg
   baseSprite:
     sprite: _DV/Mobs/Species/Harpy/parts.rsi
     state: r_leg
+  altSprites:
+    Digitigrade: DigilegAvianLegRight
+
+- type: humanoidBaseSprite
+  id: MobHarpyRFoot
+  baseSprite:
+    sprite: _DV/Mobs/Species/Harpy/parts.rsi
+    state: r_foot
+  altSprites:
+    Digitigrade: DigilegAvianFootRight
 
 - type: humanoidBaseSprite
   id: MobHarpyRHand
@@ -209,7 +221,13 @@
     state: r_arm
 
 - type: humanoidBaseSprite
-  id: MobHarpyRFoot
+  id: MobHarpyLHand
   baseSprite:
     sprite: _DV/Mobs/Species/Harpy/parts.rsi
-    state: r_foot
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobHarpyLArm
+  baseSprite:
+    sprite: _DV/Mobs/Species/Harpy/parts.rsi
+    state: l_arm

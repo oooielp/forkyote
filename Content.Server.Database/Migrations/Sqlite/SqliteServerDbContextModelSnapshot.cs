@@ -895,6 +895,11 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("REAL")
                         .HasColumnName("height");
 
+                    b.Property<string>("LegStyle")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("leg_style");
+
                     b.Property<byte[]>("Markings")
                         .HasColumnType("jsonb")
                         .HasColumnName("markings");

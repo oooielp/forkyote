@@ -45,9 +45,26 @@ namespace Content.Shared.Humanoid.Markings
         [DataField("sprites", required: true)]
         public List<SpriteSpecifier> Sprites { get; private set; } = default!;
 
+        /// <summary>
+        /// Coyote: for alternate legs, instead pull the data from *these* markings instead.
+        /// Used for digitigrade legs that are cute as heck.
+        /// Disregard this if the leg style is plantigrade.
+        /// </summary>
+        [DataField("altSprites")]
+        public Dictionary<HumanoidLegStyle, ProtoId<MarkingPrototype>> AlternateSprites { get; private set; } = new();
+
+        /// <summary>
+        /// Hidden from the character editor marking list if true.
+        /// Mainly cus it'll be used through the use of another marking,
+        /// a marking's marking if u so will u be
+        /// hidden kitten
+        /// </summary>
+        [DataField("hidden")]
+        public bool Hidden { get; private set; } = false;
+
         // impstation edit - allow markings to support shaders
-		[DataField("shader")]
-		public string? Shader { get; private set; } = null;
+        [DataField("shader")]
+        public string? Shader { get; private set; } = null;
         // end impstation edit
 
         /// <summary>
@@ -79,6 +96,9 @@ namespace Content.Shared.Humanoid.Markings
         /// </summary>
         [DataField("colorLinks")]
         public Dictionary<string, string>? ColorLinks { get; private set; }
+
+        [DataField("baseLayerSprite")]
+        public SpriteSpecifier? BaseLayerSprite { get; private set; } = default!;
 
         public Marking AsMarking()
         {

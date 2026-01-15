@@ -30,10 +30,14 @@ namespace Content.Shared.Humanoid
         LArm,
         RHand,
         LHand,
-        RLeg,
-        LLeg,
-        RFoot,
-        LFoot,
+        RLegBehind,
+        RLeg, // background
+        LLegBehind,
+        LLeg, // background
+        RFootBehind,
+        RFoot, // background
+        LFootBehind,
+        LFoot, // background
         Handcuffs,
         StencilMask,
         Ensnare,

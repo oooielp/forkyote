@@ -41,6 +41,10 @@
     RArm: MobReptilianRArm
     LHand: MobReptilianLHand
     RHand: MobReptilianRHand
+    LLegBehind: MobHumanoidAnyMarking
+    RLegBehind: MobHumanoidAnyMarking
+    LFootBehind: MobHumanoidAnyMarking
+    RFootBehind: MobHumanoidAnyMarking
     LLeg: MobReptilianLLeg
     RLeg: MobReptilianRLeg
     LFoot: MobReptilianLFoot
@@ -153,24 +157,56 @@
   baseSprite:
     sprite: Mobs/Species/Reptilian/parts.rsi
     state: torso_m
+  altSprites:
+    Digitigrade: DigilegLizardTorsoMale
 
 - type: humanoidBaseSprite
   id: MobReptilianTorsoMale
   baseSprite:
     sprite: Mobs/Species/Reptilian/parts.rsi
     state: torso_m
+  altSprites:
+    Digitigrade: DigilegLizardTorsoMale
 
 - type: humanoidBaseSprite
   id: MobReptilianTorsoFemale
   baseSprite:
     sprite: Mobs/Species/Reptilian/parts.rsi
     state: torso_f
+  altSprites:
+    Digitigrade: DigilegLizardTorsoFemale
 
 - type: humanoidBaseSprite
   id: MobReptilianLLeg
   baseSprite:
     sprite: Mobs/Species/Reptilian/parts.rsi
     state: l_leg
+  altSprites:
+    Digitigrade: DigilegPawDarkLegLeft
+
+- type: humanoidBaseSprite
+  id: MobReptilianLFoot
+  baseSprite:
+    sprite: Mobs/Species/Reptilian/parts.rsi
+    state: l_foot
+  altSprites:
+    Digitigrade: DigilegPawDarkFootLeft
+
+- type: humanoidBaseSprite
+  id: MobReptilianRLeg
+  baseSprite:
+    sprite: Mobs/Species/Reptilian/parts.rsi
+    state: r_leg
+  altSprites:
+    Digitigrade: DigilegPawDarkLegRight
+
+- type: humanoidBaseSprite
+  id: MobReptilianRFoot
+  baseSprite:
+    sprite: Mobs/Species/Reptilian/parts.rsi
+    state: r_foot
+  altSprites:
+    Digitigrade: DigilegPawDarkFootRight
 
 - type: humanoidBaseSprite
   id: MobReptilianLHand
@@ -185,18 +221,6 @@
     state: l_arm
 
 - type: humanoidBaseSprite
-  id: MobReptilianLFoot
-  baseSprite:
-    sprite: Mobs/Species/Reptilian/parts.rsi
-    state: l_foot
-
-- type: humanoidBaseSprite
-  id: MobReptilianRLeg
-  baseSprite:
-    sprite: Mobs/Species/Reptilian/parts.rsi
-    state: r_leg
-
-- type: humanoidBaseSprite
   id: MobReptilianRHand
   baseSprite:
     sprite: Mobs/Species/Reptilian/parts.rsi
@@ -207,9 +231,3 @@
   baseSprite:
     sprite: Mobs/Species/Reptilian/parts.rsi
     state: r_arm
-
-- type: humanoidBaseSprite
-  id: MobReptilianRFoot
-  baseSprite:
-    sprite: Mobs/Species/Reptilian/parts.rsi
-    state: r_foot

@@ -27,6 +27,7 @@ public sealed partial class MarkingPicker : Control
     public Action<MarkingSet>? OnMarkingRemoved;
     public Action<MarkingSet>? OnMarkingColorChange;
     public Action<MarkingSet>? OnMarkingRankChange;
+    public Action<HumanoidLegStyle>? OnLegStyleChanged;
 
     private List<Color> _currentMarkingColors = new();
 
@@ -44,6 +45,13 @@ public sealed partial class MarkingPicker : Control
     public Color CurrentEyeColor = Color.Black;
     public Marking? HairMarking;
     public Marking? FacialHairMarking;
+    public HumanoidLegStyle CurrentLegStyle = HumanoidLegStyle.Plantigrade;
+
+    private readonly HashSet<HumanoidLegStyle> _availableLegStyles = new()
+    {
+        HumanoidLegStyle.Plantigrade,
+        HumanoidLegStyle.Digitigrade,
+    };
 
     private readonly HashSet<MarkingCategories> _ignoreCategories = new();
 
@@ -82,7 +90,14 @@ public sealed partial class MarkingPicker : Control
         }
     }
 
-    public void SetData(List<Marking> newMarkings, string species, Sex sex, Color skinColor, Color eyeColor)
+    public void SetData(
+        List<Marking> newMarkings,
+        string species,
+        Sex sex,
+        Color skinColor,
+        Color eyeColor,
+        HumanoidLegStyle legStyle
+    )
     {
         var pointsProto = _prototypeManager
             .Index<SpeciesPrototype>(species).MarkingPoints;
@@ -97,6 +112,11 @@ public sealed partial class MarkingPicker : Control
         _currentSex = sex;
         CurrentSkinColor = skinColor;
         CurrentEyeColor = eyeColor;
+
+        CMarkingLegStyle.Clear();
+        CurrentLegStyle = legStyle;
+        if (!_availableLegStyles.Contains(legStyle))
+            CurrentLegStyle = HumanoidLegStyle.Plantigrade;
 
         Populate(CMarkingSearch.Text);
         PopulateUsed();
@@ -129,7 +149,7 @@ public sealed partial class MarkingPicker : Control
         IoCManager.InjectDependencies(this);
 
         _sprite = _entityManager.System<SpriteSystem>();
-        
+
         // Subscribe to consent changes to refresh categories
         CMarkingCategoryButton.OnItemSelected += OnCategoryChange;
         CMarkingsUnused.OnItemSelected += item =>
@@ -139,6 +159,8 @@ public sealed partial class MarkingPicker : Control
             MarkingAdd();
 
         CMarkingsUsed.OnItemSelected += OnUsedMarkingSelected;
+
+        CMarkingLegStyle.OnItemSelected += OnChangedLegStyle;
 
         CMarkingRemove.OnPressed += _ =>
             MarkingRemove();
@@ -158,7 +180,7 @@ public sealed partial class MarkingPicker : Control
         {
             var category = _markingCategories[i];
             var markings = GetMarkings(category);
-            
+
             // Check if the category should be ignored
             if (_ignoreCategories.Contains(category) || markings.Count == 0)
             {
@@ -181,6 +203,18 @@ public sealed partial class MarkingPicker : Control
         {
             _selectedMarkingCategory = MarkingCategories.Chest;
         }
+    }
+
+    private void SetupLegStyleButtons()
+    {
+        CMarkingLegStyle.Clear();
+
+        foreach (var legStyle in _availableLegStyles)
+        {
+            CMarkingLegStyle.AddItem(Loc.GetString($"humanoid-leg-style-{legStyle.ToString()}"), (int) legStyle);
+        }
+
+        CMarkingLegStyle.SelectId((int) CurrentLegStyle);
     }
 
     private string GetMarkingName(MarkingPrototype marking) => Loc.GetString($"marking-{marking.ID}");
@@ -214,14 +248,20 @@ public sealed partial class MarkingPicker : Control
     public void Populate(string filter)
     {
         SetupCategoryButtons();
+        SetupLegStyleButtons();
 
         CMarkingsUnused.Clear();
         _selectedUnusedMarking = null;
 
-        var sortedMarkings = GetMarkings(_selectedMarkingCategory).Values.Where(m =>
-            m.ID.ToLower().Contains(filter.ToLower()) ||
-            GetMarkingName(m).ToLower().Contains(filter.ToLower())
-        ).OrderBy(p => Loc.GetString(GetMarkingName(p)));
+        IOrderedEnumerable<MarkingPrototype> sortedMarkings = GetMarkings(_selectedMarkingCategory)
+            .Values.Where(m =>
+                !m.Hidden
+                && (m.ID.ToLower()
+                        .Contains(filter.ToLower())
+                    || GetMarkingName(m)
+                        .ToLower()
+                        .Contains(filter.ToLower())))
+            .OrderBy(p => Loc.GetString(GetMarkingName(p)));
 
         foreach (var marking in sortedMarkings)
         {
@@ -469,6 +509,13 @@ public sealed partial class MarkingPicker : Control
         }
 
         CMarkingColors.Visible = true;
+    }
+
+    private void OnChangedLegStyle(OptionButton.ItemSelectedEventArgs legs)
+    {
+        CMarkingLegStyle.SelectId(legs.Id);
+        CurrentLegStyle = (HumanoidLegStyle)legs.Id;
+        OnLegStyleChanged?.Invoke(CurrentLegStyle);
     }
 
     private void ColorChanged(int colorIndex)

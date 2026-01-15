@@ -106,6 +106,8 @@
           sprite: Mobs/Customization/masking_helpers.rsi
           state: female_full
           visible: false
+        - map: ["enum.HumanoidVisualLayers.LFootBehind"]
+        - map: ["enum.HumanoidVisualLayers.RFootBehind"]
         - map: ["enum.HumanoidVisualLayers.LFoot"]
         - map: ["enum.HumanoidVisualLayers.RFoot"]
         - map: ["socks"]

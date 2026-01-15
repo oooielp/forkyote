@@ -35,6 +35,10 @@
     RArm: MobArachnidRArm
     LHand: MobArachnidLHand
     RHand: MobArachnidRHand
+    LLegBehind: MobHumanoidAnyMarking
+    RLegBehind: MobHumanoidAnyMarking
+    LFootBehind: MobHumanoidAnyMarking
+    RFootBehind: MobHumanoidAnyMarking
     LLeg: MobArachnidLLeg
     RLeg: MobArachnidRLeg
     LFoot: MobArachnidLFoot
@@ -153,24 +157,56 @@
   baseSprite:
     sprite: Mobs/Species/Arachnid/parts.rsi
     state: torso_m
+  altSprites:
+    Digitigrade: DigilegMothTorsoMale
 
 - type: humanoidBaseSprite
   id: MobArachnidTorsoMale
   baseSprite:
     sprite: Mobs/Species/Arachnid/parts.rsi
     state: torso_m
+  altSprites:
+    Digitigrade: DigilegMothTorsoMale
 
 - type: humanoidBaseSprite
   id: MobArachnidTorsoFemale
   baseSprite:
     sprite: Mobs/Species/Arachnid/parts.rsi
     state: torso_f
+  altSprites:
+    Digitigrade: DigilegMothTorsoFemale
 
 - type: humanoidBaseSprite
   id: MobArachnidLLeg
   baseSprite:
     sprite: Mobs/Species/Arachnid/parts.rsi
     state: l_leg
+  altSprites:
+    Digitigrade: DigilegAvianLegLeft
+
+- type: humanoidBaseSprite
+  id: MobArachnidLFoot
+  baseSprite:
+    sprite: Mobs/Species/Arachnid/parts.rsi
+    state: l_foot
+  altSprites:
+    Digitigrade: DigilegAvianFootLeft
+
+- type: humanoidBaseSprite
+  id: MobArachnidRLeg
+  baseSprite:
+    sprite: Mobs/Species/Arachnid/parts.rsi
+    state: r_leg
+  altSprites:
+    Digitigrade: DigilegAvianLegRight
+
+- type: humanoidBaseSprite
+  id: MobArachnidRFoot
+  baseSprite:
+    sprite: Mobs/Species/Arachnid/parts.rsi
+    state: r_foot
+  altSprites:
+    Digitigrade: DigilegAvianFootRight
 
 - type: humanoidBaseSprite
   id: MobArachnidLHand
@@ -185,18 +221,6 @@
     state: l_arm
 
 - type: humanoidBaseSprite
-  id: MobArachnidLFoot
-  baseSprite:
-    sprite: Mobs/Species/Arachnid/parts.rsi
-    state: l_foot
-
-- type: humanoidBaseSprite
-  id: MobArachnidRLeg
-  baseSprite:
-    sprite: Mobs/Species/Arachnid/parts.rsi
-    state: r_leg
-
-- type: humanoidBaseSprite
   id: MobArachnidRHand
   baseSprite:
     sprite: Mobs/Species/Arachnid/parts.rsi
@@ -207,9 +231,3 @@
   baseSprite:
     sprite: Mobs/Species/Arachnid/parts.rsi
     state: r_arm
-
-- type: humanoidBaseSprite
-  id: MobArachnidRFoot
-  baseSprite:
-    sprite: Mobs/Species/Arachnid/parts.rsi
-    state: r_foot

@@ -429,6 +429,7 @@ namespace Content.Server.Database
         public string SkinColor { get; set; } = null!;
         public float Height { get; set; } = 1.0f;
         public float Width { get; set; } = 1.0f;
+        public string LegStyle { get; set; } = "Plantigrade";
         public int SpawnPriority { get; set; } = 0;
         public List<Job> Jobs { get; } = new();
         public List<Antag> Antags { get; } = new();

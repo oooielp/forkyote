@@ -20,11 +20,12 @@
   femaleFirstNames: NamesResomiFemale
   naming: First
   sexes:
-  - Unsexed
+  - Unsexed # NO WAY, MY RIZZOMI SEXES ALL THE TIME!!
   - Male
   - Female
   kind:
   - RaptorLike
+  allowDigilegDisplacement: false
 
 - type: speciesBaseSprites
   id: MobResomiSprites
@@ -37,6 +38,10 @@
     RArm: MobResomiRArm
     LHand: MobResomiLHand
     RHand: MobResomiRHand
+    LLegBehind: MobHumanoidAnyMarking
+    RLegBehind: MobHumanoidAnyMarking
+    LFootBehind: MobHumanoidAnyMarking
+    RFootBehind: MobHumanoidAnyMarking
     LLeg: MobResomiLLeg
     RLeg: MobResomiRLeg
     LFoot: MobResomiLFoot

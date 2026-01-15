@@ -948,6 +948,11 @@ namespace Content.Server.Database.Migrations.Postgres
                         .HasColumnType("real")
                         .HasColumnName("height");
 
+                    b.Property<string>("LegStyle")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("leg_style");
+
                     b.Property<JsonDocument>("Markings")
                         .HasColumnType("jsonb")
                         .HasColumnName("markings");

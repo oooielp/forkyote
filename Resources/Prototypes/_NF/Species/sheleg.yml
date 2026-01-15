@@ -41,6 +41,10 @@
     RHand: MobShelegRHand
     LLeg: MobShelegLLeg
     RLeg: MobShelegRLeg
+    LLegBehind: MobHumanoidAnyMarking
+    RLegBehind: MobHumanoidAnyMarking
+    LFootBehind: MobHumanoidAnyMarking
+    RFootBehind: MobHumanoidAnyMarking
     LFoot: MobShelegLFoot
     RFoot: MobShelegRFoot
     Tail: MobHumanoidAnyMarking
@@ -166,24 +170,56 @@
   baseSprite:
     sprite: _NF/Mobs/Species/Sheleg/parts.rsi
     state: torso_m
+  altSprites:
+    Digitigrade: DigilegHumanTorsoMale
 
 - type: humanoidBaseSprite
   id: MobShelegTorsoMale
   baseSprite:
     sprite: _NF/Mobs/Species/Sheleg/parts.rsi
     state: torso_m
+  altSprites:
+    Digitigrade: DigilegHumanTorsoMale
 
 - type: humanoidBaseSprite
   id: MobShelegTorsoFemale
   baseSprite:
     sprite: _NF/Mobs/Species/Sheleg/parts.rsi
     state: torso_f
+  altSprites:
+    Digitigrade: DigilegHumanTorsoFemale
 
 - type: humanoidBaseSprite
   id: MobShelegLLeg
   baseSprite:
     sprite: _NF/Mobs/Species/Sheleg/parts.rsi
     state: l_leg
+  altSprites:
+    Digitigrade: DigilegPawLegLeft
+
+- type: humanoidBaseSprite
+  id: MobShelegLFoot
+  baseSprite:
+    sprite: _NF/Mobs/Species/Sheleg/parts.rsi
+    state: l_foot
+  altSprites:
+    Digitigrade: DigilegPawFootLeft
+
+- type: humanoidBaseSprite
+  id: MobShelegRLeg
+  baseSprite:
+    sprite: _NF/Mobs/Species/Sheleg/parts.rsi
+    state: r_leg
+  altSprites:
+    Digitigrade: DigilegPawLegRight
+
+- type: humanoidBaseSprite
+  id: MobShelegRFoot
+  baseSprite:
+    sprite: _NF/Mobs/Species/Sheleg/parts.rsi
+    state: r_foot
+  altSprites:
+    Digitigrade: DigilegPawFootRight
 
 - type: humanoidBaseSprite
   id: MobShelegLArm
@@ -198,18 +234,6 @@
     state: l_hand
 
 - type: humanoidBaseSprite
-  id: MobShelegLFoot
-  baseSprite:
-    sprite: _NF/Mobs/Species/Sheleg/parts.rsi
-    state: l_foot
-
-- type: humanoidBaseSprite
-  id: MobShelegRLeg
-  baseSprite:
-    sprite: _NF/Mobs/Species/Sheleg/parts.rsi
-    state: r_leg
-
-- type: humanoidBaseSprite
   id: MobShelegRArm
   baseSprite:
     sprite: _NF/Mobs/Species/Sheleg/parts.rsi
@@ -220,9 +244,3 @@
   baseSprite:
     sprite: _NF/Mobs/Species/Sheleg/parts.rsi
     state: r_hand
-
-- type: humanoidBaseSprite
-  id: MobShelegRFoot
-  baseSprite:
-    sprite: _NF/Mobs/Species/Sheleg/parts.rsi
-    state: r_foot

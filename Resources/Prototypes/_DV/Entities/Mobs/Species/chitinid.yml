@@ -116,11 +116,15 @@
       - map: [ "enum.HumanoidVisualLayers.Eyes" ]
       - map: [ "enum.HumanoidVisualLayers.RArm" ]
       - map: [ "enum.HumanoidVisualLayers.LArm" ]
+      - map: [ "enum.HumanoidVisualLayers.RLegBehind" ]
+      - map: [ "enum.HumanoidVisualLayers.LLegBehind" ]
       - map: [ "enum.HumanoidVisualLayers.RLeg" ]
       - map: [ "enum.HumanoidVisualLayers.LLeg" ]
 #      - map: [ "enum.HumanoidVisualLayers.Underwear" ] # DeltaV
 #      - map: [ "enum.HumanoidVisualLayers.Undershirt" ] # DeltaV
       - map: [ "jumpsuit" ]
+      - map: ["enum.HumanoidVisualLayers.LFootBehind"]
+      - map: ["enum.HumanoidVisualLayers.RFootBehind"]
       - map: [ "enum.HumanoidVisualLayers.LHand" ]
       - map: [ "enum.HumanoidVisualLayers.RHand" ]
       - map: [ "enum.HumanoidVisualLayers.LFoot" ]

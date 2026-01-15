@@ -1058,83 +1058,83 @@ marking-SnoutLCanidStripe-snout_lcanidstripe_primary = Husky Snout L (Primary)
 marking-SnoutLCanidStripe-snout_lcanidstripe_secondary = Husky Snout L (Secondary)
 marking-SnoutLCanidStripe = Husky Snout L
 
-marking-SpeciesAdaptorVulpkaninHeadMale    = Base Sprite - Vulpkanin Head (Male)
-marking-SpeciesAdaptorVulpkaninHeadFemale  = Base Sprite - Vulpkanin Head (Female)
-marking-SpeciesAdaptorVulpkaninTorsoMale   = Base Sprite - Vulpkanin Chest (Male)
-marking-SpeciesAdaptorVulpkaninTorsoFemale = Base Sprite - Vulpkanin Chest (Female)
-marking-SpeciesAdaptorVulpkaninLArm        = Base Sprite - Vulpkanin Left Arm
-marking-SpeciesAdaptorVulpkaninLHand       = Base Sprite - Vulpkanin Left Hand
-marking-SpeciesAdaptorVulpkaninRArm        = Base Sprite - Vulpkanin Right Arm
-marking-SpeciesAdaptorVulpkaninRHand       = Base Sprite - Vulpkanin Right Hand
-marking-SpeciesAdaptorVulpkaninLLeg        = Base Sprite - Vulpkanin Left Leg
-marking-SpeciesAdaptorVulpkaninLFoot       = Base Sprite - Vulpkanin Left Foot
-marking-SpeciesAdaptorVulpkaninRLeg        = Base Sprite - Vulpkanin Right Leg
-marking-SpeciesAdaptorVulpkaninRFoot       = Base Sprite - Vulpkanin Right Foot
+marking-SpeciesAdaptorVulpkaninHeadMale    = Vulpkanin Head (Male)
+marking-SpeciesAdaptorVulpkaninHeadFemale  = Vulpkanin Head (Female)
+marking-SpeciesAdaptorVulpkaninTorsoMale   = Vulpkanin Chest (Male)
+marking-SpeciesAdaptorVulpkaninTorsoFemale = Vulpkanin Chest (Female)
+marking-SpeciesAdaptorVulpkaninLArm        = Vulpkanin Left Arm
+marking-SpeciesAdaptorVulpkaninLHand       = Vulpkanin Left Hand
+marking-SpeciesAdaptorVulpkaninRArm        = Vulpkanin Right Arm
+marking-SpeciesAdaptorVulpkaninRHand       = Vulpkanin Right Hand
+marking-SpeciesAdaptorVulpkaninLLeg        = Vulpkanin Left Leg
+marking-SpeciesAdaptorVulpkaninLFoot       = Vulpkanin Left Foot
+marking-SpeciesAdaptorVulpkaninRLeg        = Vulpkanin Right Leg
+marking-SpeciesAdaptorVulpkaninRFoot       = Vulpkanin Right Foot
 
-marking-SpeciesAdaptorRodentiaHeadMale     = Base Sprite - Rodentia Head (Male)
-marking-SpeciesAdaptorRodentiaHeadFemale   = Base Sprite - Rodentia Head (Female)
-marking-SpeciesAdaptorRodentiaTorsoMale    = Base Sprite - Rodentia Chest (Female)
-marking-SpeciesAdaptorRodentiaTorsoFemale  = Base Sprite - Rodentia Chest (Female)
-marking-SpeciesAdaptorRodentiaLArm         = Base Sprite - Rodentia Left Arm
-marking-SpeciesAdaptorRodentiaLHand        = Base Sprite - Rodentia Left Hand
-marking-SpeciesAdaptorRodentiaRArm         = Base Sprite - Rodentia Right Arm
-marking-SpeciesAdaptorRodentiaRHand        = Base Sprite - Rodentia Right Hand
-marking-SpeciesAdaptorRodentiaLLeg         = Base Sprite - Rodentia Left Leg
-marking-SpeciesAdaptorRodentiaLFoot        = Base Sprite - Rodentia Left Foot
-marking-SpeciesAdaptorRodentiaRLeg         = Base Sprite - Rodentia Right Leg
-marking-SpeciesAdaptorRodentiaRFoot        = Base Sprite - Rodentia Right Foot
+marking-SpeciesAdaptorRodentiaHeadMale     = Rodentia Head (Male)
+marking-SpeciesAdaptorRodentiaHeadFemale   = Rodentia Head (Female)
+marking-SpeciesAdaptorRodentiaTorsoMale    = Rodentia Chest (Female)
+marking-SpeciesAdaptorRodentiaTorsoFemale  = Rodentia Chest (Female)
+marking-SpeciesAdaptorRodentiaLArm         = Rodentia Left Arm
+marking-SpeciesAdaptorRodentiaLHand        = Rodentia Left Hand
+marking-SpeciesAdaptorRodentiaRArm         = Rodentia Right Arm
+marking-SpeciesAdaptorRodentiaRHand        = Rodentia Right Hand
+marking-SpeciesAdaptorRodentiaLLeg         = Rodentia Left Leg
+marking-SpeciesAdaptorRodentiaLFoot        = Rodentia Left Foot
+marking-SpeciesAdaptorRodentiaRLeg         = Rodentia Right Leg
+marking-SpeciesAdaptorRodentiaRFoot        = Rodentia Right Foot
 
-marking-SpeciesAdaptorHumanHeadMale        = Base Sprite - Human Head (Male)
-marking-SpeciesAdaptorHumanHeadFemale      = Base Sprite - Human Head (Female)
-marking-SpeciesAdaptorHumanTorsoMale       = Base Sprite - Human Chest (Female)
-marking-SpeciesAdaptorHumanTorsoFemale     = Base Sprite - Human Chest (Female)
-marking-SpeciesAdaptorHumanLArm            = Base Sprite - Human Left Arm
-marking-SpeciesAdaptorHumanLHand           = Base Sprite - Human Left Hand
-marking-SpeciesAdaptorHumanRArm            = Base Sprite - Human Right Arm
-marking-SpeciesAdaptorHumanRHand           = Base Sprite - Human Right Hand
-marking-SpeciesAdaptorHumanLLeg            = Base Sprite - Human Left Leg
-marking-SpeciesAdaptorHumanLFoot           = Base Sprite - Human Left Foot
-marking-SpeciesAdaptorHumanRLeg            = Base Sprite - Human Right Leg
-marking-SpeciesAdaptorHumanRFoot           = Base Sprite - Human Right Foot
+marking-SpeciesAdaptorHumanHeadMale        = Human Head (Male)
+marking-SpeciesAdaptorHumanHeadFemale      = Human Head (Female)
+marking-SpeciesAdaptorHumanTorsoMale       = Human Chest (Female)
+marking-SpeciesAdaptorHumanTorsoFemale     = Human Chest (Female)
+marking-SpeciesAdaptorHumanLArm            = Human Left Arm
+marking-SpeciesAdaptorHumanLHand           = Human Left Hand
+marking-SpeciesAdaptorHumanRArm            = Human Right Arm
+marking-SpeciesAdaptorHumanRHand           = Human Right Hand
+marking-SpeciesAdaptorHumanLLeg            = Human Left Leg
+marking-SpeciesAdaptorHumanLFoot           = Human Left Foot
+marking-SpeciesAdaptorHumanRLeg            = Human Right Leg
+marking-SpeciesAdaptorHumanRFoot           = Human Right Foot
 
-marking-SpeciesAdaptorFeroxiHeadMale       = Base Sprite - Feroxi Head (Male)
-marking-SpeciesAdaptorFeroxiHeadFemale     = Base Sprite - Feroxi Head (Female)
-marking-SpeciesAdaptorFeroxiTorsoMale      = Base Sprite - Feroxi Chest (Female)
-marking-SpeciesAdaptorFeroxiTorsoFemale    = Base Sprite - Feroxi Chest (Female)
-marking-SpeciesAdaptorFeroxiLArm           = Base Sprite - Feroxi Left Arm
-marking-SpeciesAdaptorFeroxiLHand          = Base Sprite - Feroxi Left Hand
-marking-SpeciesAdaptorFeroxiRArm           = Base Sprite - Feroxi Right Arm
-marking-SpeciesAdaptorFeroxiRHand          = Base Sprite - Feroxi Right Hand
-marking-SpeciesAdaptorFeroxiLLeg           = Base Sprite - Feroxi Left Leg
-marking-SpeciesAdaptorFeroxiLFoot          = Base Sprite - Feroxi Left Foot
-marking-SpeciesAdaptorFeroxiRLeg           = Base Sprite - Feroxi Right Leg
-marking-SpeciesAdaptorFeroxiRFoot          = Base Sprite - Feroxi Right Foot
+marking-SpeciesAdaptorFeroxiHeadMale       = Feroxi Head (Male)
+marking-SpeciesAdaptorFeroxiHeadFemale     = Feroxi Head (Female)
+marking-SpeciesAdaptorFeroxiTorsoMale      = Feroxi Chest (Female)
+marking-SpeciesAdaptorFeroxiTorsoFemale    = Feroxi Chest (Female)
+marking-SpeciesAdaptorFeroxiLArm           = Feroxi Left Arm
+marking-SpeciesAdaptorFeroxiLHand          = Feroxi Left Hand
+marking-SpeciesAdaptorFeroxiRArm           = Feroxi Right Arm
+marking-SpeciesAdaptorFeroxiRHand          = Feroxi Right Hand
+marking-SpeciesAdaptorFeroxiLLeg           = Feroxi Left Leg
+marking-SpeciesAdaptorFeroxiLFoot          = Feroxi Left Foot
+marking-SpeciesAdaptorFeroxiRLeg           = Feroxi Right Leg
+marking-SpeciesAdaptorFeroxiRFoot          = Feroxi Right Foot
 
-marking-SpeciesAdaptorReptilianHeadMale    = Base Sprite - Reptilian Head (Male)
-marking-SpeciesAdaptorReptilianHeadFemale  = Base Sprite - Reptilian Head (Female)
-marking-SpeciesAdaptorReptilianTorsoMale   = Base Sprite - Reptilian Chest (Female)
-marking-SpeciesAdaptorReptilianTorsoFemale = Base Sprite - Reptilian Chest (Female)
-marking-SpeciesAdaptorReptilianLArm        = Base Sprite - Reptilian Left Arm
-marking-SpeciesAdaptorReptilianLHand       = Base Sprite - Reptilian Left Hand
-marking-SpeciesAdaptorReptilianRArm        = Base Sprite - Reptilian Right Arm
-marking-SpeciesAdaptorReptilianRHand       = Base Sprite - Reptilian Right Hand
-marking-SpeciesAdaptorReptilianLLeg        = Base Sprite - Reptilian Left Leg
-marking-SpeciesAdaptorReptilianLFoot       = Base Sprite - Reptilian Left Foot
-marking-SpeciesAdaptorReptilianRLeg        = Base Sprite - Reptilian Right Leg
-marking-SpeciesAdaptorReptilianRFoot       = Base Sprite - Reptilian Right Foot
+marking-SpeciesAdaptorReptilianHeadMale    = Reptilian Head (Male)
+marking-SpeciesAdaptorReptilianHeadFemale  = Reptilian Head (Female)
+marking-SpeciesAdaptorReptilianTorsoMale   = Reptilian Chest (Female)
+marking-SpeciesAdaptorReptilianTorsoFemale = Reptilian Chest (Female)
+marking-SpeciesAdaptorReptilianLArm        = Reptilian Left Arm
+marking-SpeciesAdaptorReptilianLHand       = Reptilian Left Hand
+marking-SpeciesAdaptorReptilianRArm        = Reptilian Right Arm
+marking-SpeciesAdaptorReptilianRHand       = Reptilian Right Hand
+marking-SpeciesAdaptorReptilianLLeg        = Reptilian Left Leg
+marking-SpeciesAdaptorReptilianLFoot       = Reptilian Left Foot
+marking-SpeciesAdaptorReptilianRLeg        = Reptilian Right Leg
+marking-SpeciesAdaptorReptilianRFoot       = Reptilian Right Foot
 
-marking-SpeciesAdaptorOviniaHeadMale       = Base Sprite - Sheepgoat Head (Male)
-marking-SpeciesAdaptorOviniaHeadFemale     = Base Sprite - Sheepgoat Head (Female)
-marking-SpeciesAdaptorOviniaTorsoMale      = Base Sprite - Sheepgoat Chest (Female)
-marking-SpeciesAdaptorOviniaTorsoFemale    = Base Sprite - Sheepgoat Chest (Female)
-marking-SpeciesAdaptorOviniaLArm           = Base Sprite - Sheepgoat Left Arm
-marking-SpeciesAdaptorOviniaLHand          = Base Sprite - Sheepgoat Left Hand
-marking-SpeciesAdaptorOviniaRArm           = Base Sprite - Sheepgoat Right Arm
-marking-SpeciesAdaptorOviniaRHand          = Base Sprite - Sheepgoat Right Hand
-marking-SpeciesAdaptorOviniaLLeg           = Base Sprite - Sheepgoat Left Leg
-marking-SpeciesAdaptorOviniaLFoot          = Base Sprite - Sheepgoat Left Foot
-marking-SpeciesAdaptorOviniaRLeg           = Base Sprite - Sheepgoat Right Leg
-marking-SpeciesAdaptorOviniaRFoot          = Base Sprite - Sheepgoat Right Foot
+marking-SpeciesAdaptorOviniaHeadMale       = Sheepgoat Head (Male)
+marking-SpeciesAdaptorOviniaHeadFemale     = Sheepgoat Head (Female)
+marking-SpeciesAdaptorOviniaTorsoMale      = Sheepgoat Chest (Female)
+marking-SpeciesAdaptorOviniaTorsoFemale    = Sheepgoat Chest (Female)
+marking-SpeciesAdaptorOviniaLArm           = Sheepgoat Left Arm
+marking-SpeciesAdaptorOviniaLHand          = Sheepgoat Left Hand
+marking-SpeciesAdaptorOviniaRArm           = Sheepgoat Right Arm
+marking-SpeciesAdaptorOviniaRHand          = Sheepgoat Right Hand
+marking-SpeciesAdaptorOviniaLLeg           = Sheepgoat Left Leg
+marking-SpeciesAdaptorOviniaLFoot          = Sheepgoat Left Foot
+marking-SpeciesAdaptorOviniaRLeg           = Sheepgoat Right Leg
+marking-SpeciesAdaptorOviniaRFoot          = Sheepgoat Right Foot
 
 
 
@@ -1453,4 +1453,134 @@ marking-KemonoSharkTail-sharktail              = Kemono Shark Tail
 marking-KemonoTasselTail                       = Kemono Tassel Tail
 marking-KemonoTasselTail-tasseltailtone1       = Kemono Tassel Tail Tone 1
 marking-KemonoTasselTail-tasseltailtone2       = Kemono Tassel Tail Tone 2
+
+humanoid-leg-style-Plantigrade = Normal
+humanoid-leg-style-Digitigrade = Digitigrade
+
+marking-SpeciesAdaptorAvianLLeg = Avian Left Leg
+marking-SpeciesAdaptorAvianLLeg-l_leg =  Avian Left Leg
+
+marking-SpeciesAdaptorAvianLFoot = Avian Left Foot
+marking-SpeciesAdaptorAvianLFoot-l_foot = Avian Left Foot
+
+marking-SpeciesAdaptorAvianRLeg =  Avian Right Leg
+marking-SpeciesAdaptorAvianRLeg-r_leg =  Avian Right Leg
+
+marking-SpeciesAdaptorAvianRFoot =  Avian Right Foot
+marking-SpeciesAdaptorAvianRFoot-r_foot =  Avian Right Foot
+
+marking-SpeciesAdaptorAvianDarkLLeg =  Avian Dark Left Leg
+marking-SpeciesAdaptorAvianDarkLLeg-l_leg =  Avian Dark Left Leg
+
+marking-SpeciesAdaptorAvianDarkLFoot =  Avian Dark Left Foot
+marking-SpeciesAdaptorAvianDarkLFoot-l_foot =  Avian Dark Left Foot
+
+marking-SpeciesAdaptorAvianDarkRLeg =  Avian Dark Right Leg
+marking-SpeciesAdaptorAvianDarkRLeg-r_leg =  Avian Dark Right Leg
+
+marking-SpeciesAdaptorAvianDarkRFoot =  Avian Dark Right Foot
+marking-SpeciesAdaptorAvianDarkRFoot-r_foot =  Avian Dark Right Foot
+
+marking-SpeciesAdaptorChickenLLeg =  Chicken Left Leg
+marking-SpeciesAdaptorChickenLLeg-l_leg =  Chicken Left Leg
+
+marking-SpeciesAdaptorChickenLFoot =  Chicken Left Foot
+marking-SpeciesAdaptorChickenLFoot-l_foot =  Chicken Left Foot
+
+marking-SpeciesAdaptorChickenRLeg =  Chicken Right Leg
+marking-SpeciesAdaptorChickenRLeg-r_leg =  Chicken Right Leg
+
+marking-SpeciesAdaptorChickenRFoot =  Chicken Right Foot
+marking-SpeciesAdaptorChickenRFoot-r_foot =  Chicken Right Foot
+
+marking-SpeciesAdaptorSynthlizTorsoMale =  Synthliz Torso (Male)
+marking-SpeciesAdaptorSynthlizTorsoMale-SynthlizChestMale =  Synthliz Torso  (Male)
+
+marking-SpeciesAdaptorSynthlizTorsoFemale =  Synthliz Torso (Female)
+marking-SpeciesAdaptorSynthlizTorsoFemale-SynthlizChestFemale =  Synthliz Torso (Female)
+
+marking-SpeciesAdaptorSynthlizLLeg =  Synthliz Left Leg
+marking-SpeciesAdaptorSynthlizLLeg-l_leg =  Synthliz Left Leg
+
+marking-SpeciesAdaptorSynthlizLFoot =  Synthliz Left Foot
+marking-SpeciesAdaptorSynthlizLFoot-l_foot =  Synthliz Left Foot
+
+marking-SpeciesAdaptorSynthlizRLeg =  Synthliz Right Leg
+marking-SpeciesAdaptorSynthlizRLeg-r_leg = Synthliz Right Leg
+
+marking-SpeciesAdaptorSynthlizRFoot =  Synthliz Right Foot
+marking-SpeciesAdaptorSynthlizRFoot-r_foot =  Synthliz Right Foot
+
+marking-DigilegFurryTorsoMale = Furry Chest (Male)
+marking-DigilegFurryTorsoMale-FurryChestMale = Furry Chest (Male)
+
+marking-DigilegFurryTorsoFemale = Furry Chest (Female)
+marking-DigilegFurryTorsoFemale-FurryChestFemale = Furry Chest (Female)
+
+marking-DigilegBirdTorsoMale = Bird Chest (Male)
+marking-DigilegBirdTorsoMale-BirdChestMale = Bird Chest (Male)
+
+marking-DigilegBirdTorsoFemale = Bird Chest (Female)
+marking-DigilegBirdTorsoFemale-BirdChestFemale = Bird Chest (Female)
+
+marking-DigilegHumanTorsoMale = Human Chest (Male)
+marking-DigilegHumanTorsoMale-HumanChestMale = Human Chest (Male)
+
+marking-DigilegHumanTorsoFemale = Human Chest (Female)
+marking-DigilegHumanTorsoFemale-HumanChestFemale = Human Chest (Female)
+
+marking-DigilegHumanTorsoMaleSkintonee = Human Chest (Male)
+marking-DigilegHumanTorsoMaleSkintonee-HumanChestMaleSkintoned = Human Chest (Male)
+
+marking-DigilegHumanTorsoFemaleSkintoned = Human Chest (Female)
+marking-DigilegHumanTorsoFemaleSkintoned-HumanChestFemaleSkintoned = Human Chest (Female)
+
+marking-DigilegJellyTorsoMale = Jelly Chest (Male)
+marking-DigilegJellyTorsoMale-JellyChestMale = Jelly Chest (Male)
+
+marking-DigilegJellyTorsoFemale = Jelly Chest (Female)
+marking-DigilegJellyTorsoFemale-JellyChestFemale = Jelly Chest (Female)
+
+marking-DigilegLizardTorsoMale = Lizard Chest (Male)
+marking-DigilegLizardTorsoMale-LizardChestMale = Lizard Chest (Male)
+
+marking-DigilegLizardTorsoFemale = Lizard Chest (Female)
+marking-DigilegLizardTorsoFemale-LizardChestFemale = Lizard Chest (Female)
+
+marking-DigilegLumiTorsoMale = Lumi Chest (Male)
+marking-DigilegLumiTorsoMale-LumiChestMale = Lumi Chest (Male)
+
+marking-DigilegLumiTorsoFemale = Lumi Chest (Female)
+marking-DigilegLumiTorsoFemale-LumiChestFemale = Lumi Chest (Female)
+
+marking-DigilegMothTorsoMale = Moth Chest (Male)
+marking-DigilegMothTorsoMale-MothChestMale = Moth Chest (Male)
+
+marking-DigilegMothTorsoFemale = Moth Chest (Female)
+marking-DigilegMothTorsoFemale-MothChestFemale = Moth Chest (Female)
+
+marking-DigilegPlantTorsoMale = Plant Chest (Male)
+marking-DigilegPlantTorsoMale-PlantChestMale = Plant Chest (Male)
+
+marking-DigilegPlantTorsoFemale = Plant Chest (Female)
+marking-DigilegPlantTorsoFemale-PlantChestFemale = Plant Chest (Female)
+
+marking-DigilegSharkTorsoMale = Shark Chest (Male)
+marking-DigilegSharkTorsoMale-SharkChestMale = Shark Chest (Male)
+
+marking-DigilegSharkTorsoFemale = Shark Chest (Female)
+marking-DigilegSharkTorsoFemale-SharkChestFemale = Shark Chest (Female)
+
+marking-DigilegSlimeTorsoMale = Slime Chest (Male)
+marking-DigilegSlimeTorsoMale-SlimeChestMale = Slime Chest (Male)
+
+marking-DigilegSlimeTorsoFemale = Slime Chest (Female)
+marking-DigilegSlimeTorsoFemale-SlimeChestFemale = Slime Chest (Female)
+
+marking-DigilegSynthlizTorsoMale = Synthliz Chest (Male)
+marking-DigilegSynthlizTorsoMale-SynthlizChestMale = Synthliz Chest (Male)
+
+marking-DigilegSynthlizTorsoFemale = Synthliz Chest (Female)
+marking-DigilegSynthlizTorsoFemale-SynthlizChestFemale = Synthliz Chest (Female)
+
 

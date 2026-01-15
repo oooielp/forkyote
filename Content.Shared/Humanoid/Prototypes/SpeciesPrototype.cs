@@ -195,6 +195,19 @@ public sealed partial class SpeciesPrototype : IPrototype
     /// </summary>
     [DataField]
     public float AverageWidth = 40f;
+
+    /// <summary>
+    ///     COYOTE: What kind of legs does this species have by default?
+    /// </summary>
+    [DataField]
+    public HumanoidLegStyle DefaultLegStyle = HumanoidLegStyle.Plantigrade;
+
+    /// <summary>
+    ///     COYOTE: Should this species get displacement maps applied when using digitigrade leg styles?
+    ///     Cus like, resomi and other critters with their own unique shapes might not want that.
+    /// </summary>
+    [DataField]
+    public bool AllowDigilegDisplacement = true;
 }
 
 public enum SpeciesNaming : byte

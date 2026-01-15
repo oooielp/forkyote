@@ -592,6 +592,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
             false,
             humanoid);
         humanoid.EyeColor = profile.Appearance.EyeColor;
+        humanoid.LegStyle = profile.Appearance.LegStyle;
 
         SetSkinColor(
             uid,

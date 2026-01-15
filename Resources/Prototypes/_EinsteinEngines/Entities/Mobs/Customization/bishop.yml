@@ -45,7 +45,7 @@
 - type: marking
   id: CyberLimbsMarkingBishopLArm
   bodyPart: LArm
-  markingCategory: BaseLArm
+  markingCategory: BaseArms # BaseLArm
   kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction:
   - IPC
@@ -71,7 +71,7 @@
 - type: marking
   id: CyberLimbsMarkingBishopLHand
   bodyPart: LHand
-  markingCategory: BaseLHand
+  markingCategory: BaseArms # BaseLHand
   kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction:
   - IPC
@@ -93,7 +93,7 @@
 - type: marking
   id: CyberLimbsMarkingBishopLLeg
   bodyPart: LLeg
-  markingCategory: BaseLLeg
+  markingCategory: BaseLegs # BaseLLeg
   kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction:
   - IPC
@@ -118,7 +118,7 @@
 - type: marking
   id: CyberLimbsMarkingBishopLFoot
   bodyPart: LFoot
-  markingCategory: BaseLFoot
+  markingCategory: BaseLegs # BaseLFoot
   kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [IPC, Moth, Dwarf, Human, Arachnid, Felinid, Oni, Vulpkanin, HumanoidFoxes, Reptilian, Feroxi, Tajaran]
   sprites:
@@ -130,7 +130,7 @@
 - type: marking
   id: CyberLimbsMarkingBishopRArm
   bodyPart: RArm
-  markingCategory: BaseRArm
+  markingCategory: BaseArms # BaseRArm
   kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [IPC, Moth, Dwarf, Human, Arachnid, Felinid, Oni, Vulpkanin, HumanoidFoxes, Reptilian, Feroxi, Tajaran]
   sprites:
@@ -145,7 +145,7 @@
 - type: marking
   id: CyberLimbsMarkingBishopRHand
   bodyPart: RHand
-  markingCategory: BaseRHand
+  markingCategory: BaseArms # BaseRHand
   kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [IPC, Moth, Dwarf, Human, Arachnid, Felinid, Oni, Vulpkanin, HumanoidFoxes, Reptilian, Feroxi, Tajaran]
   sprites:
@@ -155,7 +155,7 @@
 - type: marking
   id: CyberLimbsMarkingBishopRLeg
   bodyPart: RLeg
-  markingCategory: BaseRLeg
+  markingCategory: BaseLegs # BaseRLeg
   kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [IPC, Moth, Dwarf, Human, Arachnid, Felinid, Oni, Vulpkanin, HumanoidFoxes, Reptilian, Feroxi, Tajaran]
   sprites:
@@ -168,7 +168,7 @@
 - type: marking
   id: CyberLimbsMarkingBishopRFoot
   bodyPart: RFoot
-  markingCategory: BaseRFoot
+  markingCategory: BaseLegs # BaseRFoot
   kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [IPC, Moth, Dwarf, Human, Arachnid, Felinid, Oni, Vulpkanin, HumanoidFoxes, Reptilian, Feroxi, Tajaran]
   sprites:

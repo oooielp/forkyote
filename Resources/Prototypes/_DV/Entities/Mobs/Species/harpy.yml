@@ -41,6 +41,8 @@
       - map: [ "enum.HumanoidVisualLayers.Eyes" ]
       - map: [ "enum.HumanoidVisualLayers.RArm" ] # Frontier: return to top near LArm
       - map: [ "enum.HumanoidVisualLayers.LArm" ]
+      - map: [ "enum.HumanoidVisualLayers.RLegBehind" ]
+      - map: [ "enum.HumanoidVisualLayers.LLegBehind" ]
       - map: [ "enum.HumanoidVisualLayers.RLeg" ]
       - map: [ "enum.HumanoidVisualLayers.LLeg" ]
       - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
@@ -49,6 +51,8 @@
       - map: [ "enum.HumanoidVisualLayers.UndershirtUnderclothes" ]
       - map: [ "socks" ]
       - map: [ "jumpsuit" ]
+      - map: ["enum.HumanoidVisualLayers.LFootBehind"]
+      - map: ["enum.HumanoidVisualLayers.RFootBehind"]
       - map: ["enum.HumanoidVisualLayers.LFoot"]
       - map: ["enum.HumanoidVisualLayers.RFoot"]
       - map: ["enum.HumanoidVisualLayers.LHand"]
@@ -178,6 +182,8 @@
       - map: [ "enum.HumanoidVisualLayers.Eyes" ]
       - map: [ "enum.HumanoidVisualLayers.RArm" ] # Frontier: return to top near LArm
       - map: [ "enum.HumanoidVisualLayers.LArm" ]
+      - map: [ "enum.HumanoidVisualLayers.RLegBehind" ]
+      - map: [ "enum.HumanoidVisualLayers.LLegBehind" ]
       - map: [ "enum.HumanoidVisualLayers.RLeg" ]
       - map: [ "enum.HumanoidVisualLayers.LLeg" ]
       - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]

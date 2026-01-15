@@ -46,7 +46,7 @@
 - type: marking
   id: CyberLimbsMarkingMorpheusLArm
   bodyPart: LArm
-  markingCategory: BaseLArm
+  markingCategory: BaseArms # BaseLArm
   kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [IPC]
   coloring:
@@ -61,7 +61,7 @@
 - type: marking
   id: CyberLimbsMarkingMorpheusLHand
   bodyPart: LHand
-  markingCategory: BaseLHand
+  markingCategory: BaseArms # BaseLHand
   kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [IPC]
   coloring:
@@ -76,7 +76,7 @@
 - type: marking
   id: CyberLimbsMarkingMorpheusLLeg
   bodyPart: LLeg
-  markingCategory: BaseLLeg
+  markingCategory: BaseLegs # BaseLLeg
   kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [IPC]
   coloring:
@@ -92,7 +92,7 @@
 - type: marking
   id: CyberLimbsMarkingMorpheusLFoot
   bodyPart: LFoot
-  markingCategory: BaseLFoot
+  markingCategory: BaseLegs # BaseLFoot
   kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [IPC]
   coloring:
@@ -109,7 +109,7 @@
 - type: marking
   id: CyberLimbsMarkingMorpheusRArm
   bodyPart: RArm
-  markingCategory: BaseRArm
+  markingCategory: BaseArms # BaseRArm
   kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [IPC]
   coloring:
@@ -125,7 +125,7 @@
 - type: marking
   id: CyberLimbsMarkingMorpheusRHand
   bodyPart: RHand
-  markingCategory: BaseRHand
+  markingCategory: BaseArms # BaseRHand
   kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [IPC]
   coloring:
@@ -140,7 +140,7 @@
 - type: marking
   id: CyberLimbsMarkingMorpheusRLeg
   bodyPart: RLeg
-  markingCategory: BaseRLeg
+  markingCategory: BaseLegs # BaseRLeg
   kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [IPC]
   coloring:
@@ -156,7 +156,7 @@
 - type: marking
   id: CyberLimbsMarkingMorpheusRFoot
   bodyPart: RFoot
-  markingCategory: BaseRFoot
+  markingCategory: BaseLegs # BaseRFoot
   kindAllowance: [BasicHumanlike, BasicFurry]
   speciesRestriction: [IPC]
   coloring:
